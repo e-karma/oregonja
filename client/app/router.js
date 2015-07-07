@@ -13,12 +13,15 @@ Router.map(function() {
       path: "s"
   }, function() {
     this.route("posts", function() {
-        this.route("post", { path: ":post_id" }, function() {
-          this.route('edit');
-        });
-        this.route("create", {
-            path: "create"
-        });
+      this.route("post", { path: ":post_id" }, function() {
+      });
+      this.route("create", {
+          path: "create"
+      });
+      this.route('edit', {
+        path: '/edit/:post_id'
+      });
+
     });
     this.route("vendors", function() {
         this.route("vendor", { path: ":vendor_id"}, function(){
@@ -95,8 +98,7 @@ Router.map(function() {
         });
     });
     this.route("settings");
-    this.route('store');
-    this.route('crm');
+    // this.route('crm');
     // this.route("homepages", function() {
     //     this.route("homepage", {
     //         path: ":homepage_id"
@@ -132,7 +134,12 @@ Router.map(function() {
   this.route('blog', function() {
     this.route("post", {path: ":post_id"});
   });
+  this.route('about', function() {
+    this.route("user", {path: ":user_id"});
+  });
   this.route('profile');
+  this.route('products');
+  this.route('contact');
 });
 
 export default Router;

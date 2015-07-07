@@ -1,4 +1,3 @@
-{{outlet}}
 	<form class="post-form" {{action 'createPost' on='submit'}}>
 	    <div class="form-group post-banner">
 	      	<div class="col-sm-4 col-sm-offset-4">
@@ -6,7 +5,28 @@
 	      	</div>
 	    </div>
 	    <div class="form-group">
-	        {{textarea value=model.body class='form-control' placeholder="Tell Your Story Here"}}
+	        <label>Body:</label>{{textarea value=model.body class='form-control' placeholder="Tell Your Story Here"}}
+	    </div>
+			<div class="form-group">
+	        <label>Intro:</label>{{textarea value=model.intro class='form-control' placeholder="Describe the Post in Less than 100 words"}}
+	    </div>
+			<div class="form-group">
+	        <label>Background Cover Img:</label>{{input value=model.bgCoverImg class='form-control' }}
+	    </div>
+			<div class="form-group">
+	        <label>Image One:</label>{{input value=model.imgOne class='form-control' }}
+	    </div>
+			<div class="form-group">
+	        <label>Image Two:</label>{{input value=model.imgTwo class='form-control' }}
+	    </div>
+			<div class="form-group">
+	        <label>Image Three:</label>{{input value=model.imgThree class='form-control' }}
+	    </div>
+			<div class="form-group">
+	        <label>TLDR:</label>{{textarea value=model.tldr class='form-control' placeholder="Too Long, Didn't Read; Summary"}}
+	    </div>
+			<div class="form-group">
+	        <label>Tags:</label>{{input value=model.tags class='form-control'}}
 	    </div>
 			<div class="col-sm-offset-5">
 				<button class="btn rb-btn-info" {{action 'createPost' model}}>Create Post</button>

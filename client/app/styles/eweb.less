@@ -8,6 +8,32 @@ body {
 h1,h2,h3,h4,h5,h6 a, ul, li, p, span {
   font-family: 'Lato', sans-serif;
 }
+.flex-container {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+.center {
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+li.flex-item {
+  margin:5px;
+  padding:5px;
+  line-height: 150%;
+  font-size:24px;
+}
+li.flex-item:active {
+  border-bottom:4px blue;
+}
+.row {
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
 // header styles
 .navbar-inverse, .navbar-brand {
   color: #97d700!important;
@@ -349,18 +375,16 @@ input.form-control-light{
 .flex-container{
   padding:0;
   margin:0;
-
   display:flex;
 }
 
-.flex-item {
+.hex-flex-item {
 	width: 280px;
 	height: 280px;
 	background: #151515;
 	-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   margin-bottom:150px;
-
 }
 
 .flex-top{
@@ -407,6 +431,11 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.img-one, .img-two, .img-three {
+  height:150px;
+  width:150px;
+}
 .full-page-bg-1, .full-page-bg-2, .full-page-bg-3 {
   background: url('images/eweb-xs-sprite.jpg');
   width: 100%;
@@ -438,9 +467,11 @@ img {
 
 // app styles (non-cms)
   // blog / post
-  .blog-post-header-img {
+  .blog-post {
     width: 100%;
-    min-height:50vh;
+    height:auto;
+    border-right: 1px solid #151515;
+    border-left: 1px solid #151515;
   }
 
   .blog-post-header-img h1 {
@@ -449,26 +480,38 @@ img {
   }
   .blog-post-user-intro {
     width: 100%;
-    min-height:50vh;
     background: white;
+  }
+  .blog-post-intro {
+    width:100%;
+    background: white;
+    min-height:400px;
+    margin: 10px 0;
   }
   .blog-post-content {
-    width:100%;
-    min-height:100vh;
+    padding: 120px 0 80px;
+    min-height:400px;
     background: white;
   }
-  .blog-post-content h1, .blog-post-content p {
+  .blog-post-footer {
+    height:300px;
+    text-align:center;
+  }
+
+  .blog-post-intro h1, .blog-post-intro p {
     color: white;
   }
-  .section-content {
-    padding: 120px 0 80px;
+  .section-inner {
+    width:100%;
   }
-.blog-post-content p {
-  line-height:150%;
-  font-size: 22px;
-  font-weight:300;
-  letter-spacing: .01rem;
-}
+
+  .blog-post-intro p {
+    line-height:150%;
+    font-size: 22px;
+    font-weight:300;
+    letter-spacing: .01rem;
+  }
+
   //carousel
   /*
 
@@ -493,14 +536,11 @@ This is a responsive carousel, if you need to have a fixed width then change the
   	height: 100%;
   	overflow:hidden;
   	background: #ccc;
-
     .slider-carousel {
   		position:relative;
   		width: 500%;
   		height: 100%;
   		animation: 30s slider infinite;
-
-
   		span {
   			width: 20%;
   			height: 100%;
@@ -515,8 +555,7 @@ This is a responsive carousel, if you need to have a fixed width then change the
   .col-md-12 {
     padding: 0;
   }
-
-.overlay {
+#overlay {
   position:absolute;
   background:rgba(0,0,0,.3);
   height:100vh;
@@ -531,4 +570,10 @@ This is a responsive carousel, if you need to have a fixed width then change the
 
 .l-70{
   padding:20px 20px 0 70px;
+}
+
+.header-button {
+  height:10vh;
+  width:100%;
+  background: white;
 }

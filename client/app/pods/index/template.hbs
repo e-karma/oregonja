@@ -8,6 +8,16 @@ past the last span, then whips back to the starting position. JavaScript has the
  are beyond the ability of CSS at the moment, so instead we’ll hide the return to the start by adding a copy
  of the first image at the end.
 -->
+<section class="header">
+  <nav>
+    <ul class="flex-container center">
+      <li class="flex-item">{{link-to 'About Us' 'about'}}</li>
+      <li class="flex-item">{{link-to 'Blog' 'blog'}}</li>
+      <li class="flex-item">{{link-to 'Products' 'products'}}</li>
+      <li class="flex-item">{{link-to 'Contact' 'contact'}}</li>
+    </ul>
+  </nav>
+</section>
 <div class="carousel-container">
   <div class="slider-carousel">
     <span>1
@@ -21,10 +31,31 @@ past the last span, then whips back to the starting position. JavaScript has the
         action="save"
       }}
     </span>
-    <span><button class="btn btn-large">{{link-to 'Blog' 'blog'}}</button></span>
-    <span>3</span>
-    <span>4</span>
-    <span>1</span>
+
+    <div class="bg-wrapper-with-intrinsic-ratio">
+        <img class="element-to-stretch effect1" src="assets/images/street-view.jpg">
+        <div class="overlay"></div>
+    </div>
+    <span>
+      <div class="bg-wrapper-with-intrinsic-ratio">
+            <img class="element-to-stretch effect1" src="assets/images/street-view.jpg">
+            <div class="overlay"></div>
+      </div>
+    </span>
+    <span>
+      <div class="bg-wrapper-with-intrinsic-ratio">
+        <img class="element-to-stretch effect1" src="assets/images/image-collapse.jpg">
+        <div class="overlay"></div>
+      </div>
+    </span>
+    <span>
+      <div class="bg-wrapper-with-intrinsic-ratio">
+          <img class="element-to-stretch effect1" src="assets/images/telescope.jpg">
+          <div class="overlay"></div>
+      </div>
+    </span>
   </div>
 </div>
+
+
 {{landing-page}}

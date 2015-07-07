@@ -16,7 +16,12 @@ module.exports = {
 		//attr
 		title : { type: 'string' },
 		body : { type: 'string' },
-		tags : { type: 'array' }
+		intro : { type: 'string'},
+		bgCoverImg : { type: 'string'},
+		imgOne : { type: 'string'},
+		imgTwo : { type: 'string'},
+		imgThree : { type: 'string'},
+		tldr : { type: 'string'},
+		tags : { type: 'array' },
 	}
 };
-

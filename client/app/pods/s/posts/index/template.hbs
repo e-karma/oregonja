@@ -2,31 +2,33 @@
 <div class="col-md-9">
 	<div class="panel panel-default">
 	<!-- Default panel contents -->
-	<div class="panel-heading"><h4>My Accounts</h4></div>
+		<div class="panel-heading"><h4>My Posts</h4></div>
+		<!-- Table -->
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Company</th>
+					<th>State</th>
+					<th>Ph #</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each model as |post|}}
+						<tr>
+							<th>{{#link-to 's.posts.post' post.id }}{{post.title}}  {{/link-to}}</th>
+							<th><th><p>{{post.description}}</p></th></th>
+							<th></th>
+							<th></th>
+							<th>
+								{{#link-to 's.posts.edit' post classNames="btn rb-btn-info"}}edit{{/link-to}}&nbsp;
 
-	<!-- Table -->
-	<table class="table">
-		<thead>
-			<tr>
-				<th>Company</th>
-				<th>State</th>
-				<th>Ph #</th>
-				<th>Email</th>
-			</tr>
-		</thead>
-		<tbody>
-			{{#each model as |post|}}
-					<tr>
-						<th>{{#link-to 's.posts.post' post.id }}{{post.title}}  {{/link-to}}</th>
-						<th><th><p>{{post.description}}</p></th></th>
-						<th></th>
-						<th></th>
-						<th><button class="btn rb-btn-info" {{action 'delete' post}}>delete</button></th>
-					</tr>
-			{{/each}}
-		</tbody>
-	</table>
-</div>
+								<button class="btn rb-btn-info" {{action 'delete' post}}>delete</button></th>
+						</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
 </div>
 <!--
 <div class="row">
@@ -68,6 +70,6 @@
 <!-- <ul class="flex-container row"> -->
 
 <!-- </ul> -->
-<!-- 
+<!--
 {{#link-to 's.posts.create'}}<div class="btn rb-btn-info">Create Post</div>{{/link-to}}
 {{#link-to 's.posts.index'}}<div class="btn rb-btn-info">View Posts</div>{{/link-to}} -->

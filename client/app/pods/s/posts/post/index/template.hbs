@@ -1,13 +1,55 @@
-<div class="post-banner">
+<!-- <div class="post-banner">
     <h1 class="white pad-top">{{model.title}}</h1>
 </div>
 <p>
-	{{#each tags as |tag|}}
+	{{#each model as |tag|}}
 	<span class="badge">
-		{{tag}}
+		{{model.tag}}
 	</span>
 	{{/each}}
 </p>
 <p>{{model.body}}</p>
-	{{#link-to 's.posts.post.edit' classNames="btn rb-btn-info"}}Edit{{/link-to}}&nbsp;
-  <button class="btn rb-btn-info" {{action 'delete' post}}>Delete</button>
+	{{#link-to 's.posts.edit' classNames="btn rb-btn-info"}}Edit{{/link-to}}&nbsp;
+  <button class="btn rb-btn-info" {{action 'delete' post}}>Delete</button> -->
+
+
+<div class="col-md-12">
+  <div class="blog-post effect1">
+    <!-- <div class="bg-wrapper-with-intrinsic-ratio">
+        <img class="element-to-stretch effect1" src="assets/images/street-view.jpg">
+        <div class="overlay"></div>
+    </div> -->
+    <div class="bg-wrapper-with-intrinsic-ratio">
+        <img class="element-to-stretch" src="assets/images/{{model.bgCoverImg}}">
+        <div class="overlay"></div>
+    </div>
+    <div class="blog-post-intro">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>{{model.title}}</h1>
+        <span>{{model.intro}}</span>
+      </div>
+    </div>
+    <hr>
+    <div class="blog-post-content">
+      <div class="col-md-8 col-md-offset-2">
+        <p>{{model.body}}</p>
+        <ul class="flex-container center">
+          <li class="flex-item"><img class="img-one" src="assets/images/{{model.imgOne}}"/></li>
+          <li class="flex-item"><img class="img-two" src="assets/images/{{model.imgTwo}}"/></li>
+          <li class="flex-item"><img class="img-three" src="assets/images/{{model.imgThree}}"/></li>
+        </ul>
+        <span>{{model.tldr}}</span>
+      </div>
+      <hr>
+    </div>
+    <div class="blog-post-footer">
+      <div class="col-md-8 col-md-offset-2">
+        {{#each model as |tag|}}
+        <span class="badge">
+          {{model.tag}}
+        </span>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

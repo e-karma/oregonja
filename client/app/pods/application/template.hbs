@@ -1,0 +1,19 @@
+
+<!-- <div class="flash">
+  {{#each flashMessages.queue as |flash|}}
+    {{flash-message flash=flash}}
+  {{/each}}
+</div> -->
+
+
+
+{{#if session.isAuthenticated}}
+  {{side-nav back='back' forward='forward' invalidateSession='invalidateSession'}}
+  <div class="col-md-12 l-70">
+    {{liquid-outlet}}
+    {{liquid-outlet "modal"}}
+  </div>
+{{else}}
+	  {{! show login panel component}}
+    {{liquid-outlet}}
+{{/if}}

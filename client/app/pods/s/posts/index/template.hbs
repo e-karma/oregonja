@@ -1,0 +1,73 @@
+
+<div class="col-md-9">
+	<div class="panel panel-default">
+	<!-- Default panel contents -->
+	<div class="panel-heading"><h4>My Accounts</h4></div>
+
+	<!-- Table -->
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Company</th>
+				<th>State</th>
+				<th>Ph #</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each model as |post|}}
+					<tr>
+						<th>{{#link-to 's.posts.post' post.id }}{{post.title}}  {{/link-to}}</th>
+						<th><th><p>{{post.description}}</p></th></th>
+						<th></th>
+						<th></th>
+						<th><button class="btn rb-btn-info" {{action 'delete' post}}>delete</button></th>
+					</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>
+</div>
+<!--
+<div class="row">
+	<div class="col-md-3">
+			<div class="list-group">
+				{{#each model as |post|}}
+
+			  {{#link-to 's.posts.post' post.id class="list-group-item"}}
+			    <h4 class="list-group-item-heading">{{post.title}}</h4>
+			    <p class="list-group-item-text">{{post.body}}</p>
+			  {{/link-to}}
+				{{/each}}
+
+			</div>
+	</div>
+	<div class="col-md-9">
+
+	</div>
+
+</div> -->
+<!-- <div class="row">
+	{{#each model as |post|}}
+	  <div class="col-md-4">
+	    <div class="thumbnail">
+	      <img src="http://placehold.it/242x200" alt="...">
+	      <div class="caption">
+					<h4>{{post.title}}</h4>
+					<p><span class="run-in">First Few Words</span>{{post.body}}</p>
+				</div>
+				<p class="pad-left">
+					{{#link-to 's.posts.post' post.id class="btn btn-primary"}}View{{/link-to}}
+					<button class="btn rb-btn-info" {{action 'delete' post}}>delete</button>
+				</p>
+	    </div>
+	  </div>
+  {{/each}}
+</div> -->
+
+<!-- <ul class="flex-container row"> -->
+
+<!-- </ul> -->
+<!-- 
+{{#link-to 's.posts.create'}}<div class="btn rb-btn-info">Create Post</div>{{/link-to}}
+{{#link-to 's.posts.index'}}<div class="btn rb-btn-info">View Posts</div>{{/link-to}} -->

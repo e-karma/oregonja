@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-3">
+    <div class="list-group">
+      {{#link-to 's.events.create' class="list-group-item"}}Create Event{{/link-to}}
+      {{#link-to 's.events.index' class="list-group-item"}}View Events{{/link-to}}
+    </div>
+    <div class="list-group">
+      <a href="#" class="list-group-item disabled">Todays Events</a>
+      <a href="#" class="list-group-item">Event To-Do #1</a>
+      <a href="#" class="list-group-item">Event To-Do #2</a>
+      <a href="#" class="list-group-item">Event To-Do #3</a>
+    </div>
+  </div>
+  <div class="col-md-9">
+    {{liquid-outlet}}
+  </div>
+</div>

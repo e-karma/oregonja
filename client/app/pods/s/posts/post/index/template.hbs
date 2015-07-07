@@ -1,0 +1,13 @@
+<div class="post-banner">
+    <h1 class="white pad-top">{{model.title}}</h1>
+</div>
+<p>
+	{{#each tags as |tag|}}
+	<span class="badge">
+		{{tag}}
+	</span>
+	{{/each}}
+</p>
+<p>{{model.body}}</p>
+	{{#link-to 's.posts.post.edit' classNames="btn rb-btn-info"}}Edit{{/link-to}}&nbsp;
+  <button class="btn rb-btn-info" {{action 'delete' post}}>Delete</button>

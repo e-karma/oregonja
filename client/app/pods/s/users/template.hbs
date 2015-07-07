@@ -1,0 +1,13 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-2">
+			<div class="pull-left page-header">
+        {{#link-to 's.users.create'}}<div class="btn rb-btn-info bump">Create User</div>{{/link-to}}
+        {{#link-to 's.users.index'}}<div class="btn rb-btn-info bump">View Users</div>{{/link-to}}
+      </div>
+		</div>
+		<div class="col-md-10">
+			{{outlet}}
+		</div>
+	</div>
+</div>

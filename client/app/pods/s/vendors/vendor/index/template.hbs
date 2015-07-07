@@ -1,0 +1,13 @@
+<h1>Vendor Template</h1>
+<div class="caption">
+  <label for="">Company:</label><h4>{{model.name}}</h4>
+  <label for="">Description:</label><p>{{model.description}}</p>
+  <label for="">Address:</label><p>{{model.address}}</p>
+  <label for="">City:</label><p>{{model.city}}</p>
+  <label for="">State:</label><p>{{model.state}}</p>
+  <label for="">Zip:</label><p>{{model.zip}}</p>
+  <label for="">Phone:</label><p>{{model.phone}}</p>
+  <label for="">Email:</label><p>{{model.email}}</p>
+
+</div>
+{{link-to 'Create Event' 's.events.create' vendor=vendor.id}}

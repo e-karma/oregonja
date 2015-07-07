@@ -1,0 +1,103 @@
+{{#if session.isAuthenticated}}
+<div class="column-1">
+    <div class="flex-item">
+      <div class="flex-body">
+      </div>
+    </div>
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+</div>
+<div class="column-2">
+  {{#each model.posts as |post|}}
+    <div class="flex-item">
+      <div class="flex-top"></div>
+      <div class="flex-body">
+          <h3>{{post.title}}</h3><br>
+          <p>{{post.body}}</p>
+      </div>
+      <div class="flex-bottom"></div>
+    </div>
+  {{/each}}
+</div>
+<div class="column-1">
+  {{#each model.pages as |page|}}
+    <div class="flex-item">
+      <div class="flex-top"><h4>page</h4></div>
+      <div class="flex-body">
+        <h3>{{page.name}}</h3>
+        <p>{{page.title}}</p>
+      </div>
+      <div class="flex-bottom"></div>
+
+    </div>
+  {{/each}}
+</div>
+<div class="column-2">
+  {{#each model.events as |event|}}
+      <div class="flex-item">
+        <div class="flex-top"></div>
+        <div class="flex-body">
+          <h3>{{event.title}}</h3>
+        </div>
+        <div class="flex-bottom"></div>
+
+      </div>
+  {{/each}}
+</div>
+<div class="column-1">
+  {{#each model.opportunity as |opportunity|}}
+    <div class="flex-item">
+      <div class="flex-top"></div>
+      <div class="flex-body">
+        <h3>{{opportunity.name}}</h3>
+      </div>
+      <div class="flex-bottom"></div>
+    </div>
+  {{/each}}
+</div>
+<div class="column-2">
+  {{#each model.todos as |todo|}}
+    <div class="flex-item">
+      <div class="flex-top"></div>
+      <div class="flex-body">
+        <h3>{{todo.title}}</h3>
+      </div>
+      <div class="flex-bottom"></div>
+    </div>
+  {{/each}}
+</div>
+<div class="column-1">
+  {{#each model.pages as |estore|}}
+    <div class="flex-item">
+      <div class="flex-top"></div>
+      <div class="flex-body">
+        <h3>{{pages.name}}</h3>
+      </div>
+      <div class="flex-bottom"></div>
+    </div>
+  {{/each}}
+</div>
+<!-- {{#hex-wrap}}
+{{/hex-wrap}}
+{{#hex-wrap}}
+{{/hex-wrap}} -->
+      <!-- <div class="column-2">
+        {{#each model as |page|}}
+          {{#hex-wrap}}
+
+          {{/hex-wrap}}
+        {{/each}}
+      </div> -->
+        <!-- <p> Welcome, {{session.user.firstName}} {{session.user.lastName}}</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p> -->
+
+      <!-- <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+          <span class="sr-only">45% Complete</span>
+        </div>
+      </div> -->
+
+{{else}}
+{{login-panel}}
+{{/if}}

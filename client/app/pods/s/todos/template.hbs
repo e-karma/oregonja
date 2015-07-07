@@ -1,0 +1,20 @@
+
+{{#link-to 's.todos.create'}}<div class="btn rb-btn-info">Create Todo</div>{{/link-to}}
+{{#link-to 's.todos.index'}}<div class="btn rb-btn-info">View Todos</div>{{/link-to}}
+<div class="row">
+	<div class="col-md-3">
+			<div class="list-group">
+				{{#each model as |todo|}}
+			  {{#link-to 's.todos.todo' todo.id class="list-group-item"}}
+			    <h4 class="list-group-item-heading">{{todo.title}}</h4>
+			    <p class="list-group-item-text">{{todo.body}}</p>
+					<button class="btn rb-btn-info" {{action 'delete' todo}}>delete</button>
+
+			  {{/link-to}}
+				{{/each}}
+			</div>
+	</div>
+	<div class="col-md-9">
+    {{liquid-outlet}}
+	</div>
+</div>

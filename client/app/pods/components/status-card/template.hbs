@@ -1,0 +1,30 @@
+{{yield}}
+<div class="bump"></div>
+<div class="post">
+    <div class="main">
+        <div class="pic"></div>
+        <div class="details">
+            <div class="name">{{session.user.firstName}} {{session.user.lastName}} {{status.activity}} and  feeling {{status.state}}</div>
+            <div class="time">{{ago status.createdAt 'YYYYMMDD'}} near {{status.address}}</div>
+        </div>
+        <div class="clear"></div>
+
+        <div class="content">{{status.note}}</div>
+        {{feed.likes-list likes=status.likes}}
+        <!--/main -->
+    </div>
+    <div class="buttons">
+        <div class="border-right">
+            <div {{action 'likeStatus' status}} class="like">Like</div>
+        </div>
+        <div class="border-right">
+            <div class="comment">Comment</div>
+        </div>
+        <div>
+            <div class="share">Share</div>
+        </div>
+        <div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>

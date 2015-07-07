@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-3">
+    <div class="list-group">
+      {{#link-to 's.vendors.create' class="list-group-item"}}Create Vendors{{/link-to}}
+      {{#link-to 's.vendors.index' class="list-group-item"}}View Vendors{{/link-to}}
+    </div>
+    <div class="list-group">
+      <a href="#" class="list-group-item disabled">Todays Tasks</a>
+      <a href="#" class="list-group-item">Task To-Do #1</a>
+      <a href="#" class="list-group-item">Task To-Do #2</a>
+      <a href="#" class="list-group-item">Task To-Do #3</a>
+
+    </div>
+  </div>
+  <div class="col-md-9">
+    {{liquid-outlet}}
+  </div>
+</div>

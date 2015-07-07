@@ -9,10 +9,16 @@
 
 {{#if session.isAuthenticated}}
   {{side-nav back='back' forward='forward' invalidateSession='invalidateSession'}}
+  <!-- <div class="bg-layer"> -->
+
   <div class="col-md-12 l-70">
     {{liquid-outlet}}
     {{liquid-outlet "modal"}}
   </div>
+  <!-- <p>
+    hello can you see me?
+  </p> -->
+<!-- </div> -->
 {{else}}
 	  {{! show login panel component}}
     {{liquid-outlet}}

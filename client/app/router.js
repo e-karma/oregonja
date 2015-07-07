@@ -129,6 +129,10 @@ Router.map(function() {
     //     });
     // });
   });
+  this.route('blog', function() {
+    this.route("post", {path: ":post_id"});
+  });
+  this.route('profile');
 });
 
 export default Router;

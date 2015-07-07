@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   menu: [{
     'title': 'Dashboard',
-    'link': 'index',
+    'link': 's.index',
     'icon': 'fa-dashboard'
   },  {
     'title': 'Marketing',

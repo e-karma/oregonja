@@ -109,9 +109,11 @@ a {
 
 
 //sidebar
-.l-70{
-  padding:20px 20px 0 70px;
-}
+
+/* .no-padding {
+  padding: -20px -20px 0 0px;
+} */
+
 .logo {
   max-width:50px;
   margin-bottom:30px;
@@ -146,7 +148,7 @@ a {
   position:absolute;
   top:0;
   bottom:0;
-  height:100%;
+  min-height:100%;
   left:0;
   width:60px;
   overflow:hidden;
@@ -396,11 +398,85 @@ input.form-control-light{
   margin: 215px 0 0 -135px;
 }
 
+.cms-bg {
+  background-color: rgba(0,0,0,.5);
+  min-height:100vh;
+}
+// image styles
+img {
+  max-width: 100%;
+  height: auto;
+}
+.full-page-bg-1, .full-page-bg-2, .full-page-bg-3 {
+  background: url('images/eweb-xs-sprite.jpg');
+  width: 100%;
+  min-height: 100vh;
+}
+.full-page-bg-1 {
+  background-position: 0px 1500px;
+}
+.full-page-bg-2 {
+  background-position: 0px 3000px;
+}
+.full-page-bg-3 {
+  background-position: 0px 4950px;
+}
+
+.bg-wrapper-with-intrinsic-ratio {
+  position: relative;
+/*   padding-bottom: 30%;
+ */  height: 0;
+}
+.element-to-stretch{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
 
 
 // app styles (non-cms)
+  // blog / post
+  .blog-post-header-img {
+    width: 100%;
+    min-height:50vh;
+  }
 
+  .blog-post-header-img h1 {
+    font-weight:700;
+    color: white;
+  }
+  .blog-post-user-intro {
+    width: 100%;
+    min-height:50vh;
+    background: white;
+  }
+  .blog-post-content {
+    width:100%;
+    min-height:100vh;
+    background: white;
+  }
+  .blog-post-content h1, .blog-post-content p {
+    color: white;
+  }
+  .section-content {
+    padding: 120px 0 80px;
+  }
+.blog-post-content p {
+  line-height:150%;
+  font-size: 22px;
+  font-weight:300;
+  letter-spacing: .01rem;
+}
   //carousel
+  /*
+
+This is using SASS with Compass compiler and I have also used CodePen's built-in AutoPrefixer (https://github.com/ai/autoprefixer) so please don't forget to add the animation prefixer required by different browser.
+
+This is a responsive carousel, if you need to have a fixed width then change the width to have pixelated value.
+
+*/
     @keyframes slider {
     	0% { left: 0%; }
     	20% { left: 0%; }
@@ -435,3 +511,24 @@ input.form-control-light{
   		}
     }
   }
+
+  .col-md-12 {
+    padding: 0;
+  }
+
+.overlay {
+  position:absolute;
+  background:rgba(0,0,0,.3);
+  height:100vh;
+  width:100%;
+}
+
+.effect1{
+	-webkit-box-shadow: 0 10px 6px -6px #777;
+	   -moz-box-shadow: 0 10px 6px -6px #777;
+	        box-shadow: 0 10px 6px -6px #777;
+}
+
+.l-70{
+  padding:20px 20px 0 70px;
+}

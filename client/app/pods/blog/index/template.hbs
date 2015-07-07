@@ -1,0 +1,29 @@
+<div class="col-md-12">
+	<div class="panel panel-default">
+	<!-- Default panel contents -->
+		<div class="panel-heading"><h4>My Accounts</h4></div>
+
+		<!-- Table -->
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Company</th>
+					<th>State</th>
+					<th>Ph #</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each model as |post|}}
+						<tr>
+							<th>{{#link-to 'blog.post' post.id }}{{post.title}}  {{/link-to}}</th>
+							<th><th><p>{{post.description}}</p></th></th>
+							<th></th>
+							<th></th>
+							<th><button class="btn rb-btn-info" {{action 'delete' post}}>delete</button></th>
+						</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -1,6 +1,26 @@
+<!--
+CSS3 Slider Carousel
+
+
+You can replace span with any thing images, video etc. If you only have 4 spans then .slider-carousel moves
+past the last span, then whips back to the starting position. JavaScript has the ability to append elements
+ on the fly and that’s the reason that JS slider give the impression of continuous loop. Such capabilities
+ are beyond the ability of CSS at the moment, so instead we’ll hide the return to the start by adding a copy
+ of the first image at the end.
+-->
 <div class="carousel-container">
   <div class="slider-carousel">
-    <span>1</span>
+    <span>1
+      {{ember-chosen
+        placeholder="Select Something..."
+        allowSingleDeselect=true
+        optionValuePath="value"
+        optionLabelPath="label"
+        content=options
+        value=value
+        action="save"
+      }}
+    </span>
     <span>2</span>
     <span>3</span>
     <span>4</span>

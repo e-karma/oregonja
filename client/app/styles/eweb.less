@@ -467,11 +467,11 @@ img {
 
 // app styles (non-cms)
   // blog / post
-  .blog-post {
+  /* .blog-post {
     width: 100%;
     height:auto;
-    border-right: 1px solid #151515;
-    border-left: 1px solid #151515;
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
   }
 
   .blog-post-header-img h1 {
@@ -482,6 +482,8 @@ img {
     width: 100%;
     background: white;
   }
+
+
   .blog-post-intro {
     width:100%;
     background: white;
@@ -490,13 +492,53 @@ img {
   }
   .blog-post-content {
     padding: 120px 0 80px;
-    min-height:400px;
+    min-height:200px;
     background: white;
   }
   .blog-post-footer {
     height:300px;
     text-align:center;
+  } */
+
+
+  .blog-footer ul {
+    list-style-type: none;
   }
+  .blog-footer ul li {
+    style-type: none;
+    margin: 30px;
+  }
+
+  .flex-container {
+    display:flex;
+    -webkit-display:flex;
+    -ms-orient-align:horizontal;
+
+  }
+  .center {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .blog-post {
+    width: 100%;
+    background:blue;
+  }
+  .blog-intro, .blog-content, .blog-footer {
+    padding: 20px 40px;
+    background:white;
+  }
+  .blog-intro h1 {
+    text-align:center;
+  }
+  .blog-content {
+    min-height:200px;
+    background:beige;
+  }
+  .blog-footer {
+    height:200px;
+  }
+
 
   .blog-post-intro h1, .blog-post-intro p {
     color: white;

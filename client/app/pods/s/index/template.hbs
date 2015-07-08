@@ -1,6 +1,6 @@
 {{#if session.isAuthenticated}}
 <div class="column-1">
-    <div class="hex-flex-item">
+    <div class="hex-flex-item effect1">
       <div class="flex-body">
       </div>
     </div>
@@ -10,7 +10,7 @@
 </div>
 <div class="column-2">
   {{#each model.posts as |post|}}
-    <div class="hex-flex-item">
+    <div class="hex-flex-item effect1">
       <div class="flex-top"></div>
       <div class="flex-body">
           <h3>{{post.title}}</h3><br>
@@ -22,7 +22,7 @@
 </div>
 <div class="column-1">
   {{#each model.pages as |page|}}
-    <div class="hex-flex-item">
+    <div class="hex-flex-item effect1">
       <div class="flex-top"><h4>page</h4></div>
       <div class="flex-body">
         <h3>{{page.name}}</h3>
@@ -35,7 +35,7 @@
 </div>
 <div class="column-2">
   {{#each model.events as |event|}}
-      <div class="hex-flex-item">
+      <div class="hex-flex-item effect1">
         <div class="flex-top"></div>
         <div class="flex-body">
           <h3>{{event.title}}</h3>

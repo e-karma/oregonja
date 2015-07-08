@@ -97,7 +97,6 @@ Router.map(function() {
             path: "create"
         });
     });
-    this.route("settings");
     // this.route('crm');
     // this.route("homepages", function() {
     //     this.route("homepage", {
@@ -130,6 +129,8 @@ Router.map(function() {
     //         path: "status"
     //     });
     // });
+    this.route("settings");
+    this.route('sites');
   });
   this.route('blog', function() {
     this.route("post", {path: ":post_id"});

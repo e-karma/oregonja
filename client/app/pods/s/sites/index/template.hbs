@@ -1,0 +1,72 @@
+
+<div class="col-md-9">
+	<div class="panel panel-default">
+	<!-- Default panel contents -->
+		<div class="panel-heading"><h4>My Sites</h4></div>
+		<!-- Table -->
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Title</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each model as |site|}}
+						<tr>
+							<th>{{#link-to 's.sites.site' site.id}}{{site.title}}  {{/link-to}}</th>
+							<th><th><p>{{site.description}}</p></th></th>
+							<th></th>
+							<th></th>
+							<th>
+								{{#link-to 's.sites.edit' site classNames="btn rb-btn-info"}}edit{{/link-to}}&nbsp;
+
+								<button class="btn rb-btn-info" {{action 'delete' site}}>delete</button></th>
+						</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+</div>
+<!--
+<div class="row">
+	<div class="col-md-3">
+			<div class="list-group">
+				{{#each model as |site|}}
+
+			  {{#link-to 's.sites.site' site.id class="list-group-item"}}
+			    <h4 class="list-group-item-heading">{{site.title}}</h4>
+			    <p class="list-group-item-text">{{site.body}}</p>
+			  {{/link-to}}
+				{{/each}}
+
+			</div>
+	</div>
+	<div class="col-md-9">
+
+	</div>
+
+</div> -->
+<!-- <div class="row">
+	{{#each model as |site|}}
+	  <div class="col-md-4">
+	    <div class="thumbnail">
+	      <img src="http://placehold.it/242x200" alt="...">
+	      <div class="caption">
+					<h4>{{site.title}}</h4>
+					<p><span class="run-in">First Few Words</span>{{site.body}}</p>
+				</div>
+				<p class="pad-left">
+					{{#link-to 's.sites.site' site.id class="btn btn-primary"}}View{{/link-to}}
+					<button class="btn rb-btn-info" {{action 'delete' site}}>delete</button>
+				</p>
+	    </div>
+	  </div>
+  {{/each}}
+</div> -->
+
+<!-- <ul class="flex-container row"> -->
+
+<!-- </ul> -->
+<!--
+{{#link-to 's.sites.create'}}<div class="btn rb-btn-info">Create Post</div>{{/link-to}}
+{{#link-to 's.sites.index'}}<div class="btn rb-btn-info">View Posts</div>{{/link-to}} -->

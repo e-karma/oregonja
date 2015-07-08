@@ -1,3 +1,42 @@
+<div class="col-md-12">
+  <!-- {{#unless isEditing}}
+  <div class="blog-post">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="blog-intro">
+         <h1>{{s.sites.model.title}}</h1>
+         <img src="assets/images/{{model.imgOne}}" alt="profile image">
+        <p>{{s.sites.site.intro}}</p>
+      </div>
+      <div class="blog-content">
+        <p>{{site.body}}</p><br>
+        <p>
+          {{site.tldr}}
+        </p>
+      </div>
+      <div class="blog-footer">
+        <ul class="flex-container center">
+          <li class="flex-item"><a href="">Like</a></li>
+          <li class="flex-item"><a href="">Comment</a></li>
+          <li class="flex-item"><a href="">Share</a></li>
+        </ul>
+        {{#each model as |tag|}}
+        <span class="badge">
+          {{model.tag}}
+        </span>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  {{else}}
+    <form>
+      <div class="form-group">
+          <label for="identification">Site Title</label>
+          {{input type="text" value=site.title class='form-control'}}
+      </div>
+    </form>
+  {{/unless}} -->
+</div>
+
 <!-- <div class="post-banner">
     <h1 class="white pad-top">{{model.title}}</h1>
 </div>
@@ -9,45 +48,11 @@
 	{{/each}}
 </p>
 <p>{{model.body}}</p>
-	{{#link-to 's.posts.edit' classNames="btn rb-btn-info"}}Edit{{/link-to}}&nbsp;
+	{{#link-to 's.sites.edit' classNames="btn rb-btn-info"}}Edit{{/link-to}}&nbsp;
   <button class="btn rb-btn-info" {{action 'delete' post}}>Delete</button> -->
 
 
-<div class="col-md-12">
-    {{#unless isEditing}}
-    <div class="blog-post">
-      <div class="col-md-8 col-md-offset-2">
-        <div class="blog-intro">
-           <h1>{{s.posts.model.title}}</h1>
-           <img src="assets/images/{{model.imgOne}}" alt="profile image">
-          <p>{{s.posts.post.intro}}</p>
-        </div>
-        <div class="blog-content">
-          <p>{{post.body}}</p><br>
-          <p>
-            {{post.tldr}}
-          </p>
-        </div>
-        <div class="blog-footer">
-          <ul class="flex-container center">
-            <li class="flex-item"><a href="">Like</a></li>
-            <li class="flex-item"><a href="">Comment</a></li>
-            <li class="flex-item"><a href="">Share</a></li>
-          </ul>
-          {{#each model as |tag|}}
-          <span class="badge">
-            {{model.tag}}
-          </span>
-          {{/each}}
-        </div>
-      </div>
-    </div>
-    {{else}}
-      <form>
-        <div class="form-group">
-            <label for="identification">Post Title</label>
-            {{input type="text" value=post.title class='form-control'}}
-        </div>
+
         <!-- <div class="form-group">
             <label for="identification">Last Name</label>
             {{input type="text" value=post.lastName class='form-control'}}
@@ -64,8 +69,7 @@
             <label for="identification">Website</label>
             {{input type="text" value=post.website class='form-control'}}
         </div> -->
-      </form>
-    {{/unless}}
+
   <!-- <div class="blog-post effect1">
     <div class="bg-wrapper-with-intrinsic-ratio">
         <img class="element-to-stretch" src="assets/images/{{model.bgCoverImg}}">
@@ -100,4 +104,3 @@
       </div>
     </div>
   </div> -->
-</div>

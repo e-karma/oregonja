@@ -1,15 +1,15 @@
 
 <div class="row">
 	{{#each model as |user|}}
-	{{#link-to 's.users.user' user.id}}
-	<div class="hex-flex-item">
-		<div class="flex-top"></div>
-		<div class="flex-body">
-				<h4>{{user.firstName}} {{user.lastName}}</h4>
-				<p>Stuff goes here</p>
+		{{#link-to 's.users.user' user.id}}
+		<div class="hex-flex-item">
+			<div class="flex-top"></div>
+			<div class="flex-body">
+					<h4>{{user.firstName}} {{user.lastName}}</h4>
+					<p>User Content Goes Here</p>
+			</div>
+			<div class="flex-bottom"></div>
 		</div>
-		<div class="flex-bottom"></div>
-	</div>
-	{{/link-to}}
+		{{/link-to}}
 	{{/each}}
 </div>

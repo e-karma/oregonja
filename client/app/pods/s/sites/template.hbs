@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-3">
+    <div class="list-group">
+      {{#link-to 's.sites.create' class="list-group-item"}}Create Site{{/link-to}}
+      {{#link-to 's.sites.index' class="list-group-item"}}View Sites{{/link-to}}
+    </div>
+    <div class="list-group">
+      <a href="#" class="list-group-item disabled">Tags</a>
+      <a href="#" class="list-group-item">Tag #1</a>
+      <a href="#" class="list-group-item">Tag #2</a>
+      <a href="#" class="list-group-item">Tag #3</a>
+    </div>
+  </div>
+  <div class="col-md-9">
+    {{liquid-outlet}}
+  </div>
+</div>

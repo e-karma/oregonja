@@ -7,16 +7,13 @@
 		<table class="table">
 			<thead>
 				<tr>
-					<th>Company</th>
-					<th>State</th>
-					<th>Ph #</th>
-					<th>Email</th>
+					<th>Title</th>
 				</tr>
 			</thead>
 			<tbody>
 				{{#each model as |post|}}
 						<tr>
-							<th>{{#link-to 's.posts.post' post.id }}{{post.title}}  {{/link-to}}</th>
+							<th>{{#link-to 's.posts.post' post.id}}{{post.title}}  {{/link-to}}</th>
 							<th><th><p>{{post.description}}</p></th></th>
 							<th></th>
 							<th></th>

@@ -17,8 +17,9 @@
 <div class="flex-container">
  {{#each model as |post|}}
    {{#hex-item title=title}}
-{{#link-to 's.posts.edit' post classNames="btn btn-clear rb-btn-info"}}Visit{{/link-to}}
    {{/hex-item}}
+   {{#link-to 'blog.post' post.id }}{{post.title}}{{/link-to}}
+   <!-- {{#link-to 's.posts.edit' post classNames="btn btn-clear rb-btn-info"}}Visit{{/link-to}} -->
  {{/each}}
  </div>
 

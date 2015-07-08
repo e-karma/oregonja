@@ -1,111 +1,24 @@
-{{yield}}
-
-  <div class="row bump">
-    <div class="col-xs-12">
-        {{#unless isEditing}}
-        <div class="blog-post">
-          <div class="col-md-8 col-md-offset-2">
-            <div class="blog-intro">
-               <h1>{{s.posts.model.title}}</h1>
-               <img src="{{model.imgOne}}" alt="profile image">
-              <p>{{s.posts.post.intro}}</p>
-            </div>
-            <div class="blog-content">
-              <p>{{post.body}}</p><br>
-              <p>
-                {{post.tldr}}
-              </p>
-            </div>
-            <div class="blog-footer">
-              <ul class="flex-container center">
-                <li class="flex-item"><a href="">Like</a></li>
-                <li class="flex-item"><a href="">Comment</a></li>
-                <li class="flex-item"><a href="">Share</a></li>
-              </ul>
-              {{#each model as |tag|}}
-              <span class="badge">
-                {{model.tag}}
-              </span>
-              {{/each}}
-            </div>
-          </div>
-        </div>
-        {{else}}
-          <form>
-            <div class="form-group">
-                <label for="identification">Post Title</label>
-                {{input type="text" value=post.title class='form-control'}}
-            </div>
-            <!-- <div class="form-group">
-                <label for="identification">Last Name</label>
-                {{input type="text" value=post.lastName class='form-control'}}
-            </div>
-            <div class="form-group">
-                <label for="identification">Tagline</label>
-                {{input type="text" value=post.tagline class='form-control'}}
-            </div>
-            <div class="form-group">
-                <label for="identification">Email</label>
-                {{input type="text" value=post.email class='form-control'}}
-            </div>
-            <div class="form-group">
-                <label for="identification">Website</label>
-                {{input type="text" value=post.website class='form-control'}}
-            </div> -->
-          </form>
-        {{/unless}}
-    </div>
+<div class="col-md-8 col-md-offset-2">
+  <div class="blog-intro">
+     <h1>{{s.posts.model.title}}</h1>
+     <img src="{{model.imgOne}}" alt="profile image">
+    <p>{{s.posts.post.intro}}</p>
   </div>
-
-  <div class="row bump">
-    <div class="col-xs-3">
-      {{#unless isEditing}}
-        <div class="btn rb-btn-info" {{action 'editPost'}}>Edit Post</div>
-        {{else}}
-        <div class="btn rb-btn-info" {{action 'saveEdit'}}>Save</div>
-      {{/unless}}
-    </div>
-      <div class="col-xs-3">
-        {{#if isEditing}}
-        <div class="btn rb-btn-info" {{action 'cancelEdit'}}>Cancel</div>
-        {{else}}
-        {{!-- TODO: currentUser doesn't exist yet --}}
-        <!-- {{#unless currentUser}}
-         <div class="btn btn-info">Send Message</div>
-        {{else}}
-         {{#unless isVendor}}
-            <div class="btn btn-info">{{#link-to 's.vendors.create' tagName='div'}}Become Vendor{{/link-to}}</div>
-          {{/unless}} -->
-        {{/unless}}
-      {{/if}}
-    </div>
+  <div class="blog-content">
+    <p>{{post.body}}</p><br>
+    <p>{{post.tldr}}</p>
   </div>
-
-
-
-<div class="blog-post">
-  <div class="col-md-8 col-md-offset-2">
-    <div class="blog-intro">
-       <h1>{{post.title}}</h1>
-      <p>{{post.intro}}</p>
-    </div>
-    <div class="blog-content">
-      <p>{{model.body}}</p><br>
-      <p>
-        {{model.tldr}}
-      </p>
-    </div>
-    <div class="blog-footer">
-      <ul class="flex-container center">
-        <li class="flex-item"><a href="">Like</a></li>
-        <li class="flex-item"><a href="">Comment</a></li>
-        <li class="flex-item"><a href="">Share</a></li>
-      </ul>
-      {{#each model as |tag|}}
-      <span class="badge">
-        {{model.tag}}
-      </span>
-      {{/each}}
-    </div>
+  <div class="blog-footer">
+    <ul class="flex-container center">
+      <li class="flex-item"><a href="">Like</a></li>
+      <li class="flex-item"><a href="">Comment</a></li>
+      <li class="flex-item"><a href="">Share</a></li>
+    </ul>
+    {{#each model as |tag|}}
+    <span class="badge">
+      {{model.tag}}
+    </span>
+    {{/each}}
+    
   </div>
 </div>

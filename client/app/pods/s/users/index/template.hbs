@@ -1,7 +1,22 @@
 
-<div class="row">
+<div class="flex-container">
+	{{#each model as |user|}}
+			{{#charly-sheen}}
+			<!-- {{link-to 's.users.user' user.id}} -->
+			{{/charly-sheen}}
+	{{/each}}
+</div>
+
+
+
+
+
+
+
+<!-- <div class="row">
 	{{#each model as |user|}}
 		{{#link-to 's.users.user' user.id}}
+
 		<div class="hex-flex-item">
 			<div class="flex-top"></div>
 			<div class="flex-body">
@@ -12,4 +27,4 @@
 		</div>
 		{{/link-to}}
 	{{/each}}
-</div>
+</div> -->

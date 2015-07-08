@@ -8,15 +8,7 @@ body {
 h1,h2,h3,h4,h5,h6 a, ul, li, p, span {
   font-family: 'Lato', sans-serif;
 }
-.flex-container {
-  -ms-box-orient: horizontal;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-}
+
 .center {
   -webkit-justify-content: center;
   justify-content: center;
@@ -372,11 +364,7 @@ input.form-control-light{
    color:white;
  }
 
-.flex-container{
-  padding:0;
-  margin:0;
-  display:flex;
-}
+
 
 .hex-flex-item {
 	width: 280px;
@@ -509,12 +497,6 @@ img {
     margin: 30px;
   }
 
-  .flex-container {
-    display:flex;
-    -webkit-display:flex;
-    -ms-orient-align:horizontal;
-
-  }
   .center {
     flex-direction: row;
     justify-content: center;
@@ -633,12 +615,6 @@ ul li {
   text-align: center;
 }
 
-.flex-container {
-  display: flex;
-  -webkit-display: flex;
-  -ms-orient-align: horizontal;
-}
-
 .center {
   flex-direction: row;
   justify-content: center;
@@ -672,4 +648,19 @@ ul li {
 
 .blog-footer {
   height: 200px;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  -webkit-display:flex;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
 }

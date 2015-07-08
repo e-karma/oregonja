@@ -1,0 +1,15 @@
+  <div class="hex-flex-item effect1">
+    <div class="flex-top"></div>
+    <div class="flex-body">
+      <div class="header-subhead">
+        <h3>{{model.title}}</h3>
+        <p>{{model.intro}}</p>
+      </div>
+      <ul>
+        <li>{{yield}}</li>
+        <li><button class="btn rb-btn-info" {{action 'delete' post}}>delete</button></li>
+      </ul>
+
+    </div>
+    <div class="flex-bottom"></div>
+  </div>

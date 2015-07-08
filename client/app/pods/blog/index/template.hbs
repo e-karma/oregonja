@@ -1,6 +1,10 @@
-<div class="column-2">
+
+<!--
   {{#each model.posts as |post|}}
-    <div class="hex-flex-item effect1">
+    {{#hex-item}}
+    {{/hex-item}}
+  {{/each}} -->
+    <!-- <div class="hex-flex-item effect1">
       <div class="flex-top"></div>
       <div class="flex-body">
           <h3>{{post.title}}</h3><br>
@@ -8,10 +12,20 @@
       </div>
       <div class="flex-bottom"></div>
     </div>
-  {{/each}}
-</div>
-<!--
-{{#each model as |post|}}
+     -->
+
+<div class="flex-container">
+ {{#each model as |post|}}
+   {{#hex-item title=title}}
+{{#link-to 's.posts.edit' post classNames="btn btn-clear rb-btn-info"}}Visit{{/link-to}}
+   {{/hex-item}}
+ {{/each}}
+ </div>
+
+ <!-- {{#link-to 'blog.post' post.id }}
+
+{{/link-to}} -->
+<!-- {{#each model as |post|}}
 		<tr>
 			<th>{{#link-to 'blog.post' post.id }}{{post.title}}  {{/link-to}}</th>
 			<th><th><p>{{post.description}}</p></th></th>

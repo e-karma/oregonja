@@ -18,14 +18,14 @@
     <div class="blog-post">
       <div class="col-md-8 col-md-offset-2">
         <div class="blog-intro">
-           <h1>{{s.posts.model.title}}</h1>
-           <img src="assets/images/{{model.imgOne}}" alt="profile image">
-          <p>{{s.posts.post.intro}}</p>
+           <h1>{{model.title}}</h1>
+           <!-- <img src="assets/images/{{model.imgOne}}" alt="profile image"> -->
+          <p>{{model.intro}}</p>
         </div>
         <div class="blog-content">
-          <p>{{post.body}}</p><br>
+          <p>{{model.body}}</p><br>
           <p>
-            {{post.tldr}}
+            {{model.tldr}}
           </p>
         </div>
         <div class="blog-footer">

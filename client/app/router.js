@@ -21,7 +21,16 @@ Router.map(function() {
       this.route('edit', {
         path: '/edit/:post_id'
       });
-
+    });
+    this.route('sites', function() {
+      this.route("site", { path: ":site_id" }, function() {
+      });
+      this.route("create", {
+          path: "create"
+      });
+      this.route('edit', {
+        path: '/edit/:site_id'
+      });
     });
     this.route("vendors", function() {
         this.route("vendor", { path: ":vendor_id"}, function(){
@@ -130,7 +139,6 @@ Router.map(function() {
     //     });
     // });
     this.route("settings");
-    this.route('sites');
   });
   this.route('blog', function() {
     this.route("post", {path: ":post_id"});

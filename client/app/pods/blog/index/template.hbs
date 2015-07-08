@@ -1,9 +1,31 @@
-<div class="col-md-12">
+<div class="column-2">
+  {{#each model.posts as |post|}}
+    <div class="hex-flex-item effect1">
+      <div class="flex-top"></div>
+      <div class="flex-body">
+          <h3>{{post.title}}</h3><br>
+          <p>{{post.body}}</p>
+      </div>
+      <div class="flex-bottom"></div>
+    </div>
+  {{/each}}
+</div>
+<!--
+{{#each model as |post|}}
+		<tr>
+			<th>{{#link-to 'blog.post' post.id }}{{post.title}}  {{/link-to}}</th>
+			<th><th><p>{{post.description}}</p></th></th>
+			<th></th>
+			<th>{{#link-to 's.posts.edit' post classNames="btn rb-btn-info"}}edit{{/link-to}}&nbsp;
+</th>
+			<th><button class="btn rb-btn-info" {{action 'delete' post}}>delete</button></th>
+		</tr>
+{{/each}} -->
+
+<!-- <div class="col-md-12">
 	<div class="panel panel-default">
-	<!-- Default panel contents -->
 		<div class="panel-heading"><h4>My Posts</h4></div>
 
-		<!-- Table -->
 		<table class="table">
 			<thead>
 				<tr>
@@ -27,4 +49,4 @@
 			</tbody>
 		</table>
 	</div>
-</div>
+</div> -->

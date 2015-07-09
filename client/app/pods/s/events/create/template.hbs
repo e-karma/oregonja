@@ -7,7 +7,7 @@
 	<form {{action 'createEvent' on='submit'}}>
 			<div class="form-group">
 				<select {{action 'selectVendor' on='change'}}>
-				{{#each model as |vendor|}}
+				{{#each vendors as |vendor|}}
 					<option>{{vendor.name}}</option>
 					<!-- <option value={{vendor.name}}>{{vendor.name}}</option> -->
 					{{/each}}

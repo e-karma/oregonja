@@ -35,6 +35,9 @@ Router.map(function() {
     this.route("vendors", function() {
         this.route("vendor", { path: ":vendor_id"}, function(){
           this.route('edit');
+          this.route('tasks');
+          this.route('employees');
+          this.route('opportunities');
         });
         this.route("create", {
             path: "create"

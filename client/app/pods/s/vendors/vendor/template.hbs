@@ -1,4 +1,4 @@
-<h1>Vendor Template</h1>
+<h1>{{model.name}}</h1>
 <div class="vendor-template">
   <div class="caption">
     <label for="">Company:</label><span>{{model.name}}</span>
@@ -9,7 +9,6 @@
     <label for="">Zip:</label><span>{{model.zip}}</span>
     <label for="">Phone:</label><span>{{model.phone}}</span>
     <label for="">Email:</label><span>{{model.email}}</span>
-
   </div>
   {{link-to 'Create Event' 's.events.create' vendor=vendor.id}}
   {{link-to 'Create Employee' 's.vendors.vendor.employees.create' vendor=vendor.id}}

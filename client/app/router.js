@@ -39,11 +39,15 @@ Router.map(function() {
             this.route('create');
           });
           this.route('employees', function() {
-            this.route('create');
+            this.route('create', function() {
+              this.route('controller');
+            });
             this.route('employee', {path: ":employee_id"});
           });
           this.route('opportunities', function() {
-            this.route('create');
+            this.route('create', function() {
+              this.route('controller');
+            });
             this.route('opportunity', {path: ":opportunity_id"});
           });
         });

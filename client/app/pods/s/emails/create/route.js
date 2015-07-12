@@ -29,6 +29,7 @@ export default Ember.Route.extend({
       };
 
       // getting input from email form
+      var fromName = this.controllerFor('s.emails.create').get('model.fullName');
       var toEmail = this.controllerFor('s.emails.create').get('toEmail');
       var emailSubject = this.controllerFor('s.emails.create').get('emailSubject');
       var emailDesc = this.controllerFor('s.emails.create').get('emailDesc');
@@ -59,6 +60,7 @@ export default Ember.Route.extend({
           text: emailObject.body,
           subject: emailObject.title,
           from_email: emailObject.from,
+          from_name: fromName,
           to: [
             {
               email: emailObject.to,

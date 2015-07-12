@@ -104,13 +104,13 @@ Router.map(function() {
       });
     });
     this.route("emails", function() {
-        this.route("email", {
-            path: ":email_id"
-        });
+      this.route("email", {
+          path: ":email_id"
+      });
 
-        this.route("create", {
-            path: "create"
-        });
+      this.route("create", {
+          path: "create"
+      });
     });
     this.route("todos", function() {
         this.route("todo", {

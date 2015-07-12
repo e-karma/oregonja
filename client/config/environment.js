@@ -37,6 +37,20 @@ module.exports = function(environment) {
       serverTokenEndpoint: '/api/v1/auths/login'
   };
 
+  ENV['mandrill'] = {
+  api: {
+    host: 'https://mandrillapp.com/api/1.0/',
+    key: 'fAYDGli8RCVZfWMTz76vnQ'
+  },
+
+  smtp: {
+    host: 'smtp.mandrillapp.com',
+    port: 587,
+    username: 'djbradyla@gmail.com',
+    password: 'fAYDGli8RCVZfWMTz76vnQ'
+  }
+
+};
 
   if (environment === 'development') {
       // ENV.APP.LOG_RESOLVER = true;

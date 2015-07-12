@@ -1,0 +1,54 @@
+{{#if isShowingEmailSuccess}}
+<p class="bg-success">Email has been successfully sent.</p>
+{{/if}}
+<fieldset>
+<form class="email-form form-horizontal" {{action 'sendEmail' on='submit'}}>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">From:</label>
+    <div class="col-sm-10">
+      <span class="form-control">
+        {{model.from}}
+      </span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label" for="toEmail">To:</label>
+    <div class="col-sm-10">
+      <span class="form-control">
+        {{model.to}}
+      </span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label" for="emailSubject">Subject:</label>
+    <div class="col-sm-10">
+      <span class="form-control">
+        {{model.title}}
+      </span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label" for="emailSubject">Small Description:</label>
+    <div class="col-sm-10">
+      <span class="form-control">
+        {{model.description}}
+      </span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label" for="bodyEmail">Message:</label>
+    <div class="col-sm-10">
+      <span class="form-control">
+        {{model.body}}
+      </span>
+    </div>
+  </div>
+  <div class="form-group">
+    {{#link-to 's.emails.index' class="btn btn-primary"}}Back to all{{/link-to}} {{#link-to 's.emails.create' class="btn btn-primary"}}Write new email{{/link-to}}
+  </div>
+</form>
+</fieldset>

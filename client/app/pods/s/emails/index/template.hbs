@@ -22,7 +22,7 @@
       {{#each model as |email|}}
       <tr>
         <td>{{email.from}}</td>
-        <td>{{email.title}}</td>
+        <td>{{#link-to 's.emails.email' email}}{{email.title}}{{/link-to}}</td>
         <td>{{email.to}}</td>
       </tr>
       {{/each}}

@@ -1,67 +1,31 @@
-{{outlet}}
-<div class="row">
-  <div class="col-md-2">
-    <div class="btn-group btn-block" role="group">
-    <button type="button" class="btn btn-block btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Ryan@ewebdesign.co
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-      <li><a href="#">Dropdown link</a></li>
-      <li><a href="#">Dropdown link</a></li>
-    </ul>
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default">Hopper</button>
   </div>
-    <button class="btn btn-primary btn-block">Send Email</button>
-    <ul class="list-group">
-      <li class="list-group-item">
-        <span class="badge">14</span>
-        Inbox
-      </li>
-      <li class="list-group-item">
-        <span class="badge">1</span>
-        Drafts
-      </li>
-      <li class="list-group-item">
-        <span class="badge">9</span>
-        Sent
-      </li>
-      <li class="list-group-item">
-        <span class="badge">3</span>
-        Spam
-      </li>
-    </ul>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default">Main</button>
   </div>
-  <div class="col-md-10">
-    <div class="btn-group btn-group-justified" role="group" aria-label="...">
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-default">Hopper</button>
-      </div>
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-default">Main</button>
-      </div>
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-default">Contacts</button>
-      </div>
-    </div>
-    <div class="">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th>From</th>
-            <th>Subject</th>
-            <th>To</th>
-          </tr>
-        </thead>
-        <tbody>
-          {{#each model as |email|}}
-          <tr>
-            <td>{{email.from}}</td>
-            <td>{{email.title}}</td>
-            <td>{{email.to}}</td>
-          </tr>
-          {{/each}}
-        </tbody>
-      </table>
-    </div>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default">Contacts</button>
   </div>
+</div>
+<div class="">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>From</th>
+        <th>Subject</th>
+        <th>To</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |email|}}
+      <tr>
+        <td>{{email.from}}</td>
+        <td>{{email.title}}</td>
+        <td>{{email.to}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
 </div>

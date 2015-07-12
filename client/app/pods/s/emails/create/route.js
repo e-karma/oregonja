@@ -8,6 +8,13 @@ export default Ember.Route.extend({
   },
 
   actions: {
+    // resets form inputs upon transition after email sending
+    willTransition: function() {
+      this.controllerFor('s.emails.create').set('toEmail').clear();
+      this.controllerFor('s.emails.create').set('emailSubject').clear();
+      this.controllerFor('s.emails.create').set('emailDesc').clear();
+      this.controllerFor('s.emails.create').set('bodyEmail').clear();
+    },
 
     sendEmail: function() {
       var that = this;
@@ -18,17 +25,48 @@ export default Ember.Route.extend({
       var emailDesc = this.controllerFor('s.emails.create').get('emailDesc');
       var bodyEmail = this.controllerFor('s.emails.create').get('bodyEmail');
 
-      var emailObject = this.store.createRecord('email', {
+      // creating model object for email
+      var emailObject = {
+        to: toEmail,
+        from: fromEmail,
+        title: emailSubject,
+        description: emailDesc,
+        body: bodyEmail
+      };
+
+      // storing email in ember store
+      var newEmail = this.store.createRecord('email', {
         to: toEmail,
         from: fromEmail,
         title: emailSubject,
         description: emailDesc,
         body: bodyEmail
       });
-      emailObject.save().then(function() {
-        that.transitionTo('s.emails.index');
+
+      // preparing data to be sent through mandrill service
+      var emailMandrillObject = {
+        message: {
+          html: emailObject.body,
+          text: emailObject.body,
+          subject: emailObject.title,
+          from_email: emailObject.from,
+          to: [
+            {
+              email: emailObject.to,
+              type: "to"
+            }
+          ]
+        }
+      };
+
+      // send email with mandrill then save to db and transition to email listings
+      that.mandrill.send(emailMandrillObject).then(function(response) {
+        newEmail.save().then(function() {
+          that.transitionTo('s.emails.index');
+        });
       });
 
     }
+
   }
 });

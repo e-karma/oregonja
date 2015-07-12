@@ -2,7 +2,7 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
     // relationships
-    users: DS.belongsTo('user'),
+    user: DS.belongsTo('user'),
 
     // TODO: add images
     // attributes

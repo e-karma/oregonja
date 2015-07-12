@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 
+  selectedUserEmail: null,
+
   model: function() {
     var userId = this.get('session.secure.user.id');
     return this.store.find('user', userId);
@@ -19,7 +21,14 @@ export default Ember.Route.extend({
     sendEmail: function() {
       var that = this;
       var userId = this.get('session.secure.user.id');
-      var fromEmail = this.get('session.secure.user.email');
+      var fromEmail = this.get('selectedUserEmail');
+
+      // checking if user hasn't selected any other email, then assign the default one to 'From' header
+      if (fromEmail === null) {
+        fromEmail = this.get('session.secure.user.email');
+      };
+
+      // getting input from email form
       var toEmail = this.controllerFor('s.emails.create').get('toEmail');
       var emailSubject = this.controllerFor('s.emails.create').get('emailSubject');
       var emailDesc = this.controllerFor('s.emails.create').get('emailDesc');
@@ -61,8 +70,9 @@ export default Ember.Route.extend({
 
       // send email with mandrill then save to db and transition to email listings
       that.mandrill.send(emailMandrillObject).then(function(response) {
-        newEmail.save().then(function() {
-          that.transitionTo('s.emails.index');
+        newEmail.save().then(function(newEmail) {
+          that.controllerFor('s.emails.email').toggleProperty('isShowingEmailSuccess');
+          that.transitionTo('s.emails.email', newEmail);
         });
       });
 

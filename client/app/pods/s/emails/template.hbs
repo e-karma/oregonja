@@ -1,1 +1,36 @@
-{{outlet}}
+<div class="row">
+  <div class="col-md-2">
+    <div class="btn-group btn-block" role="group">
+    <button type="button" class="btn btn-block btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Ryan@ewebdesign.co
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Dropdown link</a></li>
+      <li><a href="#">Dropdown link</a></li>
+    </ul>
+  </div>
+    {{#link-to 's.emails.create' class="btn btn-primary btn-block"}}Send Email{{/link-to}}
+    <ul class="list-group">
+      <li class="list-group-item">
+        <span class="badge">14</span>
+        Inbox
+      </li>
+      <li class="list-group-item">
+        <span class="badge">1</span>
+        Drafts
+      </li>
+      <li class="list-group-item">
+        <span class="badge">9</span>
+        Sent
+      </li>
+      <li class="list-group-item">
+        <span class="badge">3</span>
+        Spam
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-10">
+    {{outlet}}
+  </div>
+</div>

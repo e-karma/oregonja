@@ -20,11 +20,11 @@ export default Ember.Component.extend({
     'link': 's.vendors',
     'icon': 'fa-folder-open'
   },
-  // {
-  //   'title': 'eMail',
-  //   'link': 's.emails',
-  //   'icon': 'fa-envelope'
-  // },
+  {
+    'title': 'eMail',
+    'link': 's.emails',
+    'icon': 'fa-envelope'
+  },
   // {
   //   'title': 'Media',
   //   'link': 's.media',
@@ -71,11 +71,11 @@ export default Ember.Component.extend({
     'link': 's.users.index',
     'icon': 'fa-users'
   },
-  // {
-  //   'title': 'Settings',
-  //   'link': 's.settings',
-  //   'icon': 'fa-cog'
-  // }
+  {
+    'title': 'Settings',
+    'link': 's.settings',
+    'icon': 'fa-cog'
+  }
   ],
   actions: {
     invalidateSession() {

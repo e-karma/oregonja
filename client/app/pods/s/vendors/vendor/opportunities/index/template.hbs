@@ -3,33 +3,20 @@
     <tr>
       <th>Title</th>
       <th>Stage</th>
-      <th>Est. Close</th>
-      <th>Est. Amount</th>
+      <th>Estimated Amount</th>
+      <th>Estimated Close</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
+    {{#each model as |opportunity|}}
     <tr>
-      <th scope="row">1</th>
-      <td>Value</td>
-      <td>Value2</td>
-      <td>Value3</td>
+      <td>{{#link-to 's.vendors.vendor.opportunities.opportunity' opportunity}}{{opportunity.title}}{{/link-to}}</td>
+      <td>{{opportunity.stage}}</td>
+      <td>{{opportunity.formattedEstAmt}}</td>
+      <td>{{opportunity.estClose}}</td>
+      <td><button type="button" class="btn btn-danger" {{action 'deleteOpportunity' opportunity}}>Delete</button></td>
     </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>Value</td>
-      <td>Value2</td>
-      <td>Value3</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>Value</td>
-      <td>Value2</td>
-      <td>Value3</td>
-    </tr>
+    {{/each}}
   </tbody>
-  <tr>
-    <th></th>
-    <td></td>
-  </tr>
 </table>
-{{outlet}}

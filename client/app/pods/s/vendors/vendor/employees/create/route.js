@@ -15,13 +15,13 @@ export default Ember.Route.extend(DestroyNew, {
   actions: {
 
     willTransition: function() {
-      this.controllerFor('s.vendors.vendor.employees.create').set('firstName').clear();
-      this.controllerFor('s.vendors.vendor.employees.create').set('lastName').clear();
-      this.controllerFor('s.vendors.vendor.employees.create').set('email').clear();
-      this.controllerFor('s.vendors.vendor.employees.create').set('selectedVendor').clear();
-      this.controllerFor('s.vendors.vendor.employees.create').set('title').clear();
-      this.controllerFor('s.vendors.vendor.employees.create').set('phone').clear();
-      this.controllerFor('s.vendors.vendor.employees.create').set('selectedRole').clear();
+      this.controllerFor('s.vendors.vendor.employees.create').set('firstName', null);
+      this.controllerFor('s.vendors.vendor.employees.create').set('lastName', null);
+      this.controllerFor('s.vendors.vendor.employees.create').set('email', null);
+      this.controllerFor('s.vendors.vendor.employees.create').set('selectedVendor', null);
+      this.controllerFor('s.vendors.vendor.employees.create').set('title', null);
+      this.controllerFor('s.vendors.vendor.employees.create').set('phone', null);
+      this.controllerFor('s.vendors.vendor.employees.create').set('selectedRole', null);
     }
 
   }

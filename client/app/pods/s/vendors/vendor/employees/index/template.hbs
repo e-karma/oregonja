@@ -2,35 +2,23 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>eMail</th>
+      <th>Email</th>
       <th>Role</th>
       <th>Title</th>
       <th>Phone</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
+    {{#each model as |employee|}}
     <tr>
-      <th scope="row">1</th>
-      <td>Value</td>
-      <td>Value2</td>
-      <td>Value3</td>
+      <td>{{#link-to 's.vendors.vendor.employees.employee' employee}}{{employee.fullName}}{{/link-to}}</td>
+      <td>{{employee.email}}</td>
+      <td>{{employee.role}}</td>
+      <td>{{employee.title}}</td>
+      <td>{{employee.phone}}</td>
+      <td><button type="button" class="btn btn-danger" {{action 'deleteEmployee' employee}}>Delete</button></td>
     </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>Value</td>
-      <td>Value2</td>
-      <td>Value3</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>Value</td>
-      <td>Value2</td>
-      <td>Value3</td>
-    </tr>
+    {{/each}}
   </tbody>
-  <tr>
-    <th></th>
-    <td></td>
-  </tr>
 </table>
-{{outlet}}

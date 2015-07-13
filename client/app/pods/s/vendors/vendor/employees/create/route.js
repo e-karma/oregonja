@@ -13,31 +13,17 @@ export default Ember.Route.extend(DestroyNew, {
   },
 
   actions: {
-    // selected vendor from the list is stored in the selectedVendor property
-    selectVendor: function(vendor) {
-      this.set('selectedVendor', vendor);
+
+    willTransition: function() {
+      this.controllerFor('s.vendors.vendor.employees.create').set('firstName').clear();
+      this.controllerFor('s.vendors.vendor.employees.create').set('lastName').clear();
+      this.controllerFor('s.vendors.vendor.employees.create').set('email').clear();
+      this.controllerFor('s.vendors.vendor.employees.create').set('selectedVendor').clear();
+      this.controllerFor('s.vendors.vendor.employees.create').set('title').clear();
+      this.controllerFor('s.vendors.vendor.employees.create').set('phone').clear();
+      this.controllerFor('s.vendors.vendor.employees.create').set('selectedRole').clear();
     }
 
   }
-    // model() {
-    //   var vendors = this.store.findAll('vendor');
-    //   this.controllerFor('s.events.create').set('vendors', vendors);
-    //   return vendors;
-    // },
-    //
-    // actions: {
-    //   selectVendor: function(vendor){
-    //     this.set('selectedVendor', vendor);
-    //     // this.event.set('event', vendor);
-    //   },
-    //
-    //   createEvent(model) {
-    //       // var userId = this.session.get('user.id');
-    //       var vendor = this.session.get('vendor');
-    //       var event = this.session.get('event', vendor).then(result => {
-    //           model.set('event', result);
-    //           return model.save();
-    //       }).then(event => this.transitionTo('s.events.event', event));
-    //   }
-    // }
+
 });

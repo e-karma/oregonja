@@ -1,4 +1,7 @@
 import DS from 'ember-data';
+import Ember from 'ember';
+
+const { computed } = Ember;
 
 export default DS.Model.extend({
   //relationships
@@ -8,7 +11,10 @@ export default DS.Model.extend({
   firstName: DS.attr('string'),
   lastName: DS.attr('string'),
   email: DS.attr('string'),
-  role: DS.attr('array'),
-  title: DS.attr('array'),
-  phone: DS.attr('number')
+  role: DS.attr('string'),
+  title: DS.attr('string'),
+  phone: DS.attr('string'),
+  fullName: computed('firstName', 'lastName', function () {
+    return this.get('firstName') + ' ' + this.get('lastName');
+  })
 });

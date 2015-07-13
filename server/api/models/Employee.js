@@ -20,13 +20,13 @@ module.exports = {
       type: 'string'
     },
     role : {
-      type: 'array'
+      type: 'string'
     },
     title: {
-      type: 'array'
+      type: 'string'
     },
     phone: {
-      type: 'number'
+      type: 'string'
     }
   }
 };

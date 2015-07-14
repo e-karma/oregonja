@@ -9,7 +9,7 @@
     </tr>
   </thead>
   <tbody>
-    {{#each model as |opportunity|}}
+    {{#each model.opportunities as |opportunity|}}
     <tr>
       <td>{{#link-to 's.vendors.vendor.opportunities.opportunity' opportunity}}{{opportunity.title}}{{/link-to}}</td>
       <td>{{opportunity.stage}}</td>

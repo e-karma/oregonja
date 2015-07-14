@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    {{#each model as |employee|}}
+    {{#each model.employees as |employee|}}
     <tr>
       <td>{{#link-to 's.vendors.vendor.employees.employee' employee}}{{employee.fullName}}{{/link-to}}</td>
       <td>{{employee.email}}</td>

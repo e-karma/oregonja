@@ -32,7 +32,7 @@
 			<div class="col-sm-10">
 				<select id="employee">
 					<option>Select an employee</option>
-					{{#each model as |employee|}}
+					{{#each model.employees as |employee|}}
 						<option {{action 'selectEmployee' employee}}>{{employee.fullName}}</option>
 					{{/each}}
 				</select>

@@ -21,14 +21,15 @@ export default Ember.Controller.extend({
       var description = this.get('description');
       var dueDate = this.get('dueDate');
       var employee = this.get('selectedEmployee');
-      var vendor = this.get('selectedVendor');
+      var vendor = this.controllerFor('s.vendors.vendor').get('vendor');
 
       var newTask = this.store.createRecord('task', {
         name: name,
         description: description,
         dueDate: dueDate,
         employee: employee,
-        assignedTo: user
+        assignedTo: user,
+        vendor: vendor
       })
       newTask.save().then(function(newTask){
         that.controllerFor('s.vendors.vendor.tasks.task').toggleProperty('isShowingTaskSuccess');

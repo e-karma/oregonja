@@ -16,7 +16,10 @@ export default Ember.Controller.extend({
     },
 
     saveOpportunity: function() {
-      this.get('model').save();
+      var that = this;
+      this.get('model').save().then(function(savedOpportunity) {
+        that.transitionToRoute('s.vendors.vendor.opportunities.index');
+      });
       return false;
     }
   }

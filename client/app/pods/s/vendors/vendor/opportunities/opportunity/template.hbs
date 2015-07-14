@@ -2,7 +2,7 @@
 <p class="bg-success">Opportunity was successfully created.</p>
 {{/if}}
 <fieldset>
-<form class="opportunity-form form-horizontal">
+<form class="opportunity-form form-horizontal" {{action 'saveOpportunity' on="submit"}}>
   <div class="form-group">
     <label class="col-sm-2 control-label">Title:</label>
     <div class="col-sm-10">
@@ -13,11 +13,21 @@
   </div>
 
   <div class="form-group">
-    <label class="col-sm-2 control-label" for="stage">Stage:</label>
+    <label class="col-sm-2 control-label" for="stage">Stage: <span class="glyphicon glyphicon-pencil" aria-hidden="true" {{action 'changeStage'}}></span></label>
     <div class="col-sm-10">
-      <span class="form-control">
-        {{model.stage}}
-      </span>
+      {{#if isChangingStage}}
+        <select id="stage">
+          <option>Select a stage</option>
+          {{#each stages as |stage|}}
+            <option {{action 'selectStage' stage}}>{{stage}}</option>
+          {{/each}}
+        </select>
+      {{else}}
+        <span class="form-control">
+          {{model.stage}}
+        </span>
+      {{/if}}
+
     </div>
   </div>
 
@@ -40,7 +50,7 @@
   </div>
 
   <div class="form-group">
-    {{#link-to 's.vendors.vendor.opportunities.index' class="btn btn-primary"}}Back to all{{/link-to}} {{#link-to 's.vendors.vendor.opportunities.create' class="btn btn-primary"}}Create new Opportunity{{/link-to}}
+    {{#link-to 's.vendors.vendor.opportunities.index' class="btn btn-default"}}Back to all{{/link-to}} <button type="submit" class="btn btn-primary">Save</button>
   </div>
 </form>
 </fieldset>

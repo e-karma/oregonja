@@ -1,15 +1,32 @@
 
 <div class="flex-container">
 	{{#each model as |user|}}
-			{{#charly-sheen}}
-			<!-- {{link-to 's.users.user' user.id}} -->
-			{{/charly-sheen}}
+		{{#link-to 's.users.user' user.id class="hopper-email-item"}}
+		<div class="row">
+			<div class="col-md-3">
+				<img src="http://lorempixel.com/130/130/people/" alt="profile image">
+			</div>
+			<div class="col-md-9 white">
+				<h1>{{user.fullName}}</h1>
+				<span>{{user.tagline}}</span>
+				<span>{{user.email}}</span>
+			</div>
+		</div>
+		<hr class="white">
+		<div class="row">
+			<div class="col-md-3 col-md-offset-3">
+				<button type="button" name="button">View</button>
+				<button type="button" name="button">Edit</button>
+			</div>
+		</div>
+		{{/link-to}}
 	{{/each}}
 </div>
 
 
 
-
+<!-- {{#charly-sheen}}{{/charly-sheen}} -->
+<!-- {{link-to 's.users.user' user.id}} -->
 
 
 

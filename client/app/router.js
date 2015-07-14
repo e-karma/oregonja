@@ -108,10 +108,16 @@ Router.map(function() {
       this.route("email", {
           path: ":email_id"
       });
-
+      this.route("campaigns", {
+          path: "campaigns"
+      });
       this.route("create", {
           path: "create"
       });
+      this.route('hopper', function() {});
+      this.route('sent');
+      this.route('drafts');
+      this.route('spam');
     });
     this.route("todos", function() {
         this.route("todo", {

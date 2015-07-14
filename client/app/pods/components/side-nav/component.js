@@ -21,7 +21,7 @@ export default Ember.Component.extend({
     'icon': 'fa-folder-open'
   },
   {
-    'title': 'eMail',
+    'title': 'Email',
     'link': 's.emails',
     'icon': 'fa-envelope'
   },

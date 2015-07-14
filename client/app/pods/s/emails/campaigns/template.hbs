@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-3">
+    <div class="template">
+      <h1>Template 1</h1>
+    </div>
+    <div class="template">
+      <h1>Template 2</h1>
+    </div>
+    <div class="template">
+      <h1>Template 3</h1>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Emails</th>
+          <th>Role</th>
+          <th>Vendor Type</th>
+          <th>Select</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model as |vendor|}}
+            <tr>
+              <th>{{#link-to 's.vendors.vendor' vendor.id }}{{vendor.name}}  {{/link-to}}</th>
+              <th><th><p>{{vendor.state}}</p></th></th>
+              <th></th>
+              <th></th>
+              <th><button class="btn rb-btn-info" {{action 'delete' vendor}}>delete</button></th>
+            </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

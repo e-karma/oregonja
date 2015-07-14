@@ -1,0 +1,12 @@
+<tbody>
+  {{#each model as |vendor|}}
+      <tr>
+        <th>{{#link-to 's.vendors.vendor' vendor.id }}{{vendor.name}}  {{/link-to}}</th>
+        <th><th><p>{{vendor.state}}</p></th></th>
+        <th></th>
+        <th></th>
+        <th><button class="btn rb-btn-info" {{action 'delete' vendor}}>delete</button></th>
+      </tr>
+  {{/each}}
+</tbody>
+{{outlet}}

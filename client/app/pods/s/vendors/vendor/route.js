@@ -1,7 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(params) {
-    return this.store.find('vendor', params.vendor_id);
+  model: function(params) {
+    var vendor = this.store.find('vendor', params.vendor_id);
+    this.controllerFor('s.vendors.vendor').set('vendor', vendor);
+
+    return vendor;
   }
 });

@@ -16,12 +16,9 @@ export default Ember.Controller.extend({
       var firstName = this.get('firstName');
       var lastName = this.get('lastName');
       var email = this.get('email');
-      var vendor = this.get('selectedVendor');
+      var vendor = this.controllerFor('s.vendors.vendor').get('vendor');
       var title = this.get('title');
       var role = this.get('selectedRole');
-      if (role === null) {
-        role = "Buyer";
-      };
       var phone = this.get('phone');
 
 

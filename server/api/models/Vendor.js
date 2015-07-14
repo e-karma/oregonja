@@ -21,6 +21,14 @@ module.exports = {
           model: 'employee'
         },
 
+        opportunities: {
+          model: 'opportunity'
+        },
+
+        tasks: {
+          model: 'task'
+        },
+
         // events: {
         //   collection: 'event',
         //   via: 'vendor'

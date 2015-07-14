@@ -8,7 +8,8 @@ export default DS.Model.extend({
     // services: DS.hasMany('service'),
     events: DS.hasMany('event'),
     employees: DS.hasMany('employee'),
-
+    opportunities: DS.hasMany('opportunity'),
+    tasks: DS.hasMany('task'),
     // attr
     name: DS.attr('string'),
     description: DS.attr('string'),

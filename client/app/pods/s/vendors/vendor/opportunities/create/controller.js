@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  stages: ["Demo", "Evaluation", "Solutions Planning Call", "Quote", "Quote Review", "Closed", "Won & Closed", "Lost"],
+  stages: ["Demo", "Evaluation", "Solutions Planning Call", "Quote", "Quote Review", "Closed - Won", "Closed - Lost"],
 
   actions: {
 
@@ -16,8 +16,7 @@ export default Ember.Controller.extend({
       var estClose = this.get('estClose');
       var estAmt = this.get('estAmt');
       var stage = this.get('selectedStage');
-      var vendor = this.get('selectedVendor');
-
+      var vendor = this.controllerFor('s.vendors.vendor').get('vendor');
       var newOpportunity = this.store.createRecord('opportunity', {
         title: title,
         estClose: estClose,

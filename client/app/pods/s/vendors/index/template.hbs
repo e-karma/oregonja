@@ -60,12 +60,12 @@
         </tr>
       </thead>
       <tbody>
-        {{#each model as |opportunities|}}
+        {{#each model as |tasks|}}
             <tr>
-              <th>{{#link-to 's.opportunities.opportunity' opportunity.id }}{{opportunity.title}}  {{/link-to}}</th>
-              <th><th><p>{{opportunity.estClose}}</p></th></th>
-              <th><p>{{opportunity.estClose}}</p></th>
-              <th><p>{{opportunity.estAmt}}</p></th>
+              <th>{{#link-to 's.vendors.vendor.tasks.task' task.id }}{{task.name}}  {{/link-to}}</th>
+              <th><th><p>{{task.name}}</p></th></th>
+              <th><p>{{task.description}}</p></th>
+              <th><p>Third Property</p></th>
               <th><button class="btn rb-btn-info" {{action 'delete' vendor}}>delete</button></th>
             </tr>
         {{/each}}

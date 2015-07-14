@@ -1,3 +1,44 @@
-<h1>Hopper</h1>
-<p>Lets add a "publish" boolean to posts (maybe others) so there can be a visual cue for items in "the hopper".  Content Curation takes place here</p>
-{{outlet}}
+<div class="col-md-1">
+  <ul class="list-group">
+    <li class="list-group-item">
+      <span class="badge">14</span>
+      {{#link-to 's.emails.hopper.index'}}All{{/link-to}}
+    </li>
+    <li class="list-group-item">
+      <span class="badge">1</span>
+      {{#link-to 's.emails.hopper.outline'}}Outline{{/link-to}}
+    </li>
+    <li class="list-group-item">
+      <span class="badge">9</span>
+      {{#link-to 's.emails.hopper.proof-read'}}Proof-Read{{/link-to}}
+    </li>
+    <li class="list-group-item">
+      <span class="badge">3</span>
+      {{#link-to 's.emails.hopper.media'}}Rich Media{{/link-to}}
+    </li>
+  </ul>
+</div>
+<div class="col-md-10 col-md-offset-1">
+  <table class="table table-hover">
+    <thead>
+      <!-- <tr>
+        <th>From</th>
+        <th>Subject</th>
+        <th>To</th>
+      </tr> -->
+    </thead>
+    <tbody>
+      {{#each model as |email|}}
+      <tr>
+        <td>{{email.from}}</td>
+        <td>{{#link-to 's.hopper.email' email}}{{email.title}}{{/link-to}}</td>
+        <td>{{email.to}}</td>
+      </tr>
+      {{/each}}
+      {{outlet}}
+    </tbody>
+  </table>
+</div>
+
+<!-- <h1>Hopper</h1>
+<p>Lets add a "publish" boolean to posts (maybe others) so there can be a visual cue for items in "the hopper".  Content Curation takes place here</p> -->

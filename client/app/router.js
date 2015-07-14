@@ -114,7 +114,12 @@ Router.map(function() {
       this.route("create", {
           path: "create"
       });
-      this.route('hopper', function() {});
+      this.route('hopper', function() {
+        this.route('outline');
+        this.route('proof-read');
+        this.route('media');
+        this.route('publish');
+      });
       this.route('sent');
       this.route('drafts');
       this.route('spam');
@@ -122,6 +127,15 @@ Router.map(function() {
     this.route("todos", function() {
         this.route("todo", {
             path: ":todo_id"
+        });
+
+        this.route("create", {
+            path: "create"
+        });
+    });
+    this.route("bullpen", function() {
+        this.route("pitch", {
+            path: ":pitch_id"
         });
 
         this.route("create", {

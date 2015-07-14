@@ -31,6 +31,11 @@ export default Ember.Component.extend({
   //   'icon': 'fa-laptop'
   // },
   {
+    'title': 'Bullpen',
+    'link': 's.bullpen',
+    'icon': 'fa-money'
+  },
+  {
     'title': 'Events',
     'link': 's.events',
     'icon': 'fa-calendar'

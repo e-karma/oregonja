@@ -1,5 +1,5 @@
 {{outlet}}
-	<form class="post-form" {{action 'createTodo' on='submit'}}>
+	<form class="post-form" {{action 'createPitch' on='submit'}}>
 	    <div class="form-group post-banner">
 	      	<div class="col-sm-4 col-sm-offset-4">
 						{{input type="text" value=model.title class='form-control form-control-light' placeholder="Your Todo Title Goes Here"}}
@@ -9,6 +9,6 @@
 	        {{textarea value=model.body class='form-control' placeholder="What needs to be done?"}}
 	    </div>
 			<div class="col-sm-offset-5">
-				<button class="btn rb-btn-info" {{action 'createTodo' model}}>Create Todo</button>
+				<button class="btn rb-btn-info" {{action 'createPitch' model}}>Create Pitch</button>
 			</div>
 	</form>

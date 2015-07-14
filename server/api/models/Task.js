@@ -8,6 +8,9 @@ module.exports = {
         employee: {
             model: 'employee'
         },
+        vendor: {
+          model: 'vendor'
+        },
 
         // attr
         name: {

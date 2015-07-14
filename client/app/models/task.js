@@ -5,6 +5,7 @@ export default DS.Model.extend({
 	//relationships
 	assignedTo: DS.belongsTo('user'),
 	employee: DS.belongsTo('employee'),
+	vendor: DS.belongsTo('vendor'),
 
 	// attr
   name: DS.attr('string'),

@@ -1,31 +1,25 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>Urgency</th>
+      <th>Name</th>
       <th>Due Date</th>
       <th>Description</th>
       <th>Assigned Contact</th>
+      <th>Employee</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Value</td>
-      <td>Value2</td>
-      <td>Value3</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>Value</td>
-      <td>Value2</td>
-      <td>Value3</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>Value</td>
-      <td>Value2</td>
-      <td>Value3</td>
-    </tr>
+    {{#each model as |task|}}
+      <tr>
+        <td>{{#link-to 's.vendors.vendor.tasks.task' task}}{{task.name}}{{/link-to}}</td>
+        <td>{{task.dueDate}}</td>
+        <td>{{task.description}}</td>
+        <td>{{task.assignedTo.fullName}}</td>
+        <td>{{task.employee.fullName}}</td>
+        <td><button type="button" class="btn btn-danger" {{action 'deleteTask' task}}>Delete</button></td>
+      </tr>
+    {{/each}}
   </tbody>
   <tr>
     <th></th>

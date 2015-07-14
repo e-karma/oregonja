@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  stages: ["First Stage", "Second Stage", "Third Stage"],
+  stages: ["Demo", "Evaluation", "Solutions Planning Call", "Quote", "Quote Review", "Closed", "Won & Closed", "Lost"],
 
   actions: {
 
@@ -16,9 +16,6 @@ export default Ember.Controller.extend({
       var estClose = this.get('estClose');
       var estAmt = this.get('estAmt');
       var stage = this.get('selectedStage');
-      if (stage === null) {
-        stage = "First Stage";
-      };
       var vendor = this.get('selectedVendor');
 
       var newOpportunity = this.store.createRecord('opportunity', {

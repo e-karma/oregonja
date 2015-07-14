@@ -37,6 +37,7 @@ Router.map(function() {
           this.route('edit');
           this.route('tasks', function() {
             this.route('create');
+            this.route('task', { path: ":task_id" } );
           });
           this.route('employees', function() {
             this.route('create', function() {

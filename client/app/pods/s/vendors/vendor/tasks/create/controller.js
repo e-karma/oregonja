@@ -1,27 +1,37 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  //pulled model in the route is set here to the vendors property
-  vendors: null,
+  users: null,
 
   actions: {
+
+    selectUser: function(user) {
+      this.set('selectedUser', user);
+    },
+
+    selectEmployee: function(employee) {
+      this.set('selectedEmployee', employee);
+    },
+
     createTask: function() {
       var that = this;
 
-      var firstName = this.get('title');
-      var lastName = this.get('address');
-      var email = this.get('description');
-      var role = this.get('eventDate');
-      var title = this.get('selectedVendor');
+      var user = this.get('selectedUser');
+      var name = this.get('name');
+      var description = this.get('description');
+      var dueDate = this.get('dueDate');
+      var employee = this.get('selectedEmployee');
+      var vendor = this.get('selectedVendor');
 
       var newTask = this.store.createRecord('task', {
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        role: role,
-        vendor: vendor
+        name: name,
+        description: description,
+        dueDate: dueDate,
+        employee: employee,
+        assignedTo: user
       })
       newTask.save().then(function(newTask){
+        that.controllerFor('s.vendors.vendor.tasks.task').toggleProperty('isShowingTaskSuccess');
         that.transitionToRoute('s.vendors.vendor.tasks.task', newTask);
       });
     }

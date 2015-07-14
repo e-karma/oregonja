@@ -19,7 +19,7 @@ module.exports = {
             required: true
         },
         dueDate: {
-            type: 'dateiso'
+            type: 'datetime'
         }
     }
 };

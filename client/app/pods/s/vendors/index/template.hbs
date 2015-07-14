@@ -1,5 +1,98 @@
 <div class="col-md-9">
   <div class="panel panel-default">
+    <div class="panel-heading"><h4>Dashboard</h4></div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th><button type="button" name="button">Todays </button>Tasks</th>
+            <th></th>
+          </tr>
+        </thead>
+      </table>
+      <hr>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Opportunities for the <button type="button" name="button">Day</button></th>
+            <th></th>
+          </tr>
+        </thead>
+      </table>
+      <hr>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Todays <button type="button" name="button">Events</button>
+            <br>
+            Accounts Added:<br>
+            Emails Added:<br>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- {{#each model as |opportunities|}}
+            <tr>
+              <th>{{#link-to 's.opportunities.opportunity' opportunity.id }}{{opportunity.title}}  {{/link-to}}</th>
+              <th><th><p>{{opportunity.estClose}}</p></th></th>
+              <th><p>{{opportunity.estClose}}</p></th>
+              <th><p>{{opportunity.estAmt}}</p></th>
+              <th><button class="btn rb-btn-info" {{action 'delete' vendor}}>delete</button></th>
+            </tr>
+        {{/each}} -->
+      </tbody>
+    </table>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading"><h4>Tasks</h4></div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Assigned To</th>
+          <th>Due Date</th>
+          <th>Urgency</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model as |opportunities|}}
+            <tr>
+              <th>{{#link-to 's.opportunities.opportunity' opportunity.id }}{{opportunity.title}}  {{/link-to}}</th>
+              <th><th><p>{{opportunity.estClose}}</p></th></th>
+              <th><p>{{opportunity.estClose}}</p></th>
+              <th><p>{{opportunity.estAmt}}</p></th>
+              <th><button class="btn rb-btn-info" {{action 'delete' vendor}}>delete</button></th>
+            </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading"><h4>Opportunities</h4></div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Estimated Amount</th>
+          <th>Estimated Close Date</th>
+          <th>Stage</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model as |opportunities|}}
+            <tr>
+              <th>{{#link-to 's.opportunities.opportunity' opportunity.id }}{{opportunity.title}}  {{/link-to}}</th>
+              <th><th><p>{{opportunity.estClose}}</p></th></th>
+              <th><p>{{opportunity.estClose}}</p></th>
+              <th><p>{{opportunity.estAmt}}</p></th>
+              <th><button class="btn rb-btn-info" {{action 'delete' vendor}}>delete</button></th>
+            </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="panel panel-default">
   <!-- Default panel contents -->
   <div class="panel-heading"><h4>My Accounts</h4></div>
 

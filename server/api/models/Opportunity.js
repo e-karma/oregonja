@@ -11,11 +11,11 @@ module.exports = {
 
         // attr
         estClose: {
-            type: 'dateiso',
+            type: 'datetime',
             required: true
         },
         estAmt: {
-            type: 'number',
+            type: 'string',
             required: true
         },
         title: {

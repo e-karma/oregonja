@@ -1,1 +1,46 @@
-{{outlet}}
+{{#if isShowingOpportunitySuccess}}
+<p class="bg-success">Opportunity was successfully created.</p>
+{{/if}}
+<fieldset>
+<form class="opportunity-form form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Title:</label>
+    <div class="col-sm-10">
+      <span class="form-control">
+        {{model.title}}
+      </span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label" for="stage">Stage:</label>
+    <div class="col-sm-10">
+      <span class="form-control">
+        {{model.stage}}
+      </span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label" for="estAmt">Estimated Amount:</label>
+    <div class="col-sm-10">
+      <span class="form-control">
+        {{model.formattedEstAmt}}
+      </span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label" for="estClose">Estimated Close:</label>
+    <div class="col-sm-10">
+      <span class="form-control">
+        {{model.estClose}}
+      </span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    {{#link-to 's.vendors.vendor.opportunities.index' class="btn btn-primary"}}Back to all{{/link-to}} {{#link-to 's.vendors.vendor.opportunities.create' class="btn btn-primary"}}Create new Opportunity{{/link-to}}
+  </div>
+</form>
+</fieldset>

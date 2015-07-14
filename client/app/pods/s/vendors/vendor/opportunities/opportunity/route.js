@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 
   model: function(params) {
-    this.store.find('opportunity', params.employee_id)
+    this.store.find('opportunity', params.opportunity_id)
   },
 
   actions: {

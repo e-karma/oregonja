@@ -142,6 +142,20 @@ Router.map(function() {
             path: "create"
         });
     });
+    this.route("settings", function() {
+      this.route('bullpen');
+      this.route('campaigns');
+      this.route('crm');
+      this.route('dashboard');
+      this.route('emails');
+      this.route('events');
+      this.route('forecast');
+      this.route('mktg');
+      this.route('pages');
+      this.route('posts');
+      this.route('users');
+      this.route('ecommerce');
+    });
     // this.route('crm');
     // this.route("homepages", function() {
     //     this.route("homepage", {
@@ -174,7 +188,7 @@ Router.map(function() {
     //         path: "status"
     //     });
     // });
-    this.route("settings");
+
   });
   this.route('blog', function() {
     this.route("post", {path: ":post_id"});

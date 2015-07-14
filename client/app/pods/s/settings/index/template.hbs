@@ -1,0 +1,28 @@
+<div class="form-group">
+<h4>Timezone</h4>
+  <select {{action 'selectTimezone' on='change'}}>
+    <option>EST</option>
+    <option>CST</option>
+    <option>MST</option>
+    <option>PST</option>
+  </select>
+</div><hr>
+<div class="form-group">
+  <h4>Navigation Background Color</h4>{{col-pick value=color}}
+</div><hr>
+<div class="form-group">
+  <h4>Navigation Font Color</h4>{{col-pick value=color}}
+</div><hr>
+<!-- <div class="col-md-3">
+  <div class="form-group">
+    <select {{action 'selectTimezone' on='change'}}>
+      <option>EST</option>
+      <option>CST</option>
+      <option>MST</option>
+      <option>PST</option>
+    </select>
+  </div>
+  <h4><button type="button" name="button">{{col-pick value=color}}</button></h4>
+  <h4><button type="button" name="button">{{col-pick value=color}}</button></h4>
+</div> -->
+{{outlet}}

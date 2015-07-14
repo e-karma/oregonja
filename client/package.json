@@ -50,5 +50,8 @@
     "g": "^2.0.0",
     "glob": "^4.0.5",
     "liquid-fire": "^0.20.4"
+  },
+  "dependencies": {
+    "ember-colpick": "^0.5.0"
   }
 }

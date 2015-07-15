@@ -4,8 +4,20 @@
       <table class="table">
         <thead>
           <tr>
-            <th><button type="button" name="button">Todays </button>Tasks</th>
-            <th></th>
+            <th>
+              <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Todays <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Tomorrows</a></li>
+                <li><a href="#">This Weeks</a></li>
+                <li><a href="#">This Month</a></li>
+              </ul>
+            </div>
+            Tasks
+          </th>
+          <th></th>
           </tr>
         </thead>
       </table>
@@ -13,11 +25,32 @@
       <table class="table">
         <thead>
           <tr>
-            <th>Opportunities for the <button type="button" name="button">Day</button></th>
+            <th>Opportunities for the <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Todays <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Tomorrows</a></li>
+                <li><a href="#">This Weeks</a></li>
+                <li><a href="#">This Month</a></li>
+              </ul>
+            </div>
+          </th>
             <th></th>
           </tr>
           <tr>
-            <th>Forecast for the <button type="button" name="button">Month</button></th>
+            <th>Forecast for the
+              <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Month <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Week</a></li>
+                <li><a href="#">Quarter</a></li>
+                <li><a href="#">Year</a></li>
+              </ul>
+            </div>
+          </th>
             <th></th>
           </tr>
         </thead>
@@ -26,7 +59,14 @@
     <table class="table">
       <thead>
         <tr>
-          <th>Todays <button type="button" name="button">Events</button></th>
+          <th>Todays <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Events <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Tasks</a></li>
+            </ul>
+          </div></th>
           </tr>
         <tr>
         <tr><th>Accounts Added:</th></tr>

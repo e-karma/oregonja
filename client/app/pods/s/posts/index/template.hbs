@@ -1,15 +1,24 @@
-<div class="flex-container">
- {{#each model as |post|}}
-   {{#hex-item title=title}}
-   {{#link-to 's.posts.edit' post classNames="btn btn-clear rb-btn-info"}}Visit{{/link-to}}
-   {{/hex-item}}
- {{/each}}
+
+ <div class="flex-container">
+ 	{{#each model as |post|}}
+ 		{{#link-to 's.posts.post' post.id class="hopper-email-item"}}
+ 		<div class="row">
+ 			<div class="col-md-3">
+ 				<img src="http://lorempixel.com/130/130/people/" alt="profile image">
+ 			</div>
+ 			<div class="col-md-9 white">
+ 				<h1>{{post.title}}</h1>
+ 				<span>{{post.intro}}</span>
+ 				<span>{{post.body}}</span>
+ 			</div>
+ 		</div>
+ 		<hr class="white">
+ 		<div class="row">
+ 			<div class="col-md-6 col-md-offset-3">
+ 				<button class="btn btn-primary">View</button>
+ 				<button class="btn btn-primary">Edit</button>
+ 			</div>
+ 		</div>
+ 		{{/link-to}}
+ 	{{/each}}
  </div>
-
-
-
-<!-- {{#link-to 's.posts.post' post.id}}{{post.title}}{{/link-to}}
-{{post.description}}
-{{#link-to 's.posts.edit' post classNames="btn rb-btn-info"}}edit{{/link-to}}&nbsp;
-<button class="btn rb-btn-info" {{action 'delete' post}}>delete</button>
- -->

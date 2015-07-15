@@ -59,8 +59,8 @@ Router.map(function() {
     this.route("mktg", function() {
       this.route('content');
       this.route('seo');
-      this.route('branding');
-      this.route('analytics');
+      // this.route('branding');
+      // this.route('analytics');
     });
     this.route("media", function() {
       this.route("upload", {

@@ -62,19 +62,26 @@ Router.map(function() {
       // this.route('branding');
       // this.route('analytics');
     });
-    this.route("media", function() {
-      this.route("upload", {
-          path: "upload"
-      });
+    // this.route("media", function() {
+    //   this.route("upload", {
+    //       path: "upload"
+    //   });
+    //
+    //   this.route("albums", function() {
+    //       this.route("album", {
+    //           path: ":album_id"
+    //       });
+    //
+    //       this.route("create", {
+    //           path: "create"
+    //       });
+    //   });
+    // });
+    this.route('page-manager', function() {
+      this.route('new');
 
-      this.route("albums", function() {
-          this.route("album", {
-              path: ":album_id"
-          });
-
-          this.route("create", {
-              path: "create"
-          });
+      this.route('edit', {
+        path: '/edit/:page_id'
       });
     });
     this.route("users", function() {
@@ -95,14 +102,6 @@ Router.map(function() {
         this.route("create", {
             path: "create"
         });
-    });
-
-    this.route('page-manager', function() {
-      this.route('new');
-
-      this.route('edit', {
-        path: '/edit/:page_id'
-      });
     });
     this.route("emails", function() {
       this.route("email", {
@@ -143,18 +142,18 @@ Router.map(function() {
         });
     });
     this.route("settings", function() {
-      this.route('bullpen');
-      this.route('campaigns');
-      this.route('crm');
-      this.route('dashboard');
-      this.route('emails');
-      this.route('events');
-      this.route('forecast');
-      this.route('mktg');
-      this.route('pages');
-      this.route('posts');
-      this.route('users');
-      this.route('ecommerce');
+      // this.route('bullpen');
+      // this.route('campaigns');
+      // this.route('crm');
+      // this.route('dashboard');
+      // this.route('emails');
+      // this.route('events');
+      // this.route('forecast');
+      // this.route('mktg');
+      // this.route('pages');
+      // this.route('posts');
+      // this.route('users');
+      // this.route('ecommerce');
     });
     // this.route('crm');
     // this.route("homepages", function() {
@@ -190,15 +189,15 @@ Router.map(function() {
     // });
 
   });
-  this.route('blog', function() {
-    this.route("post", {path: ":post_id"});
-  });
-  this.route('about', function() {
-    this.route("user", {path: ":user_id"});
-  });
-  this.route('profile');
-  this.route('products');
-  this.route('contact');
+  // this.route('blog', function() {
+  //   this.route("post", {path: ":post_id"});
+  // });
+  // this.route('about', function() {
+  //   this.route("user", {path: ":user_id"});
+  // });
+  // this.route('profile');
+  // this.route('products');
+  // this.route('contact');
 });
 
 export default Router;

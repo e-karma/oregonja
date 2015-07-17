@@ -26,7 +26,6 @@
     "qunit": "~1.17.1",
     "lodash": "~3.10.0",
     "colpick": "2.0.2",
-    "chosen": "1.4.2",
-    "summernote": "~0.6.1"
+    "chosen": "1.4.2"
   }
 }

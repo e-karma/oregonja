@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  // since we have two models needed, let's retrieve one of them using beforeModel hook. Also we can retrieve needed info on most top route
   beforeModel: function() {
     var users = this.store.findAll('user');
     this.controllerFor('s.vendors.vendor.tasks.create').set('users', users);

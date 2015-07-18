@@ -13,7 +13,7 @@ export default Ember.Route.extend(DestroyNew, {
   },
 
   actions: {
-
+    // clears all forms input if you leave the route for employee create
     willTransition: function() {
       this.controllerFor('s.vendors.vendor.employees.create').set('firstName', null);
       this.controllerFor('s.vendors.vendor.employees.create').set('lastName', null);

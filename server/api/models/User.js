@@ -73,6 +73,12 @@ module.exports = {
         tagline: {
             type: 'string'
         },
+        profileImg: {
+            type: 'string'
+        },
+        bannerImg: {
+            type: 'string'
+        },
 
         website: {
             type: 'string'

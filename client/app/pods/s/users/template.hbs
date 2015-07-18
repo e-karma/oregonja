@@ -1,9 +1,20 @@
 <div class="row">
-	<div class="col-md-12">
-		<div class="pull-left page-header">
-      {{#link-to 's.users.create'}}<div class="btn rb-btn-info bump">Create User</div>{{/link-to}}
-      {{#link-to 's.users.index'}}<div class="btn rb-btn-info bump">View Users</div>{{/link-to}}
-    </div>
-		{{outlet}}
-	</div>
+  <div class="col-md-3">
+    <ul class="nav nav-pills">
+			<li>{{#link-to 's.users.create'}}Create User{{/link-to}}</li>
+      <li>{{#link-to 's.users.index'}}View Users{{/link-to}}</li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <ul class="nav nav-pills" role="tablist">
+      <li role="presentation" class="active"><a href="#">Tags <span class="badge">7</span></a></li>
+      <li role="presentation"><a href="#">Go<span class="badge">4</span></a></li>
+      <li role="presentation"><a href="#">Here <span class="badge">3</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+      {{liquid-outlet}}
+  </div>
 </div>

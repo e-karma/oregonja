@@ -1,27 +1,15 @@
-{{outlet}}
-<div class="container">
 
-    {{user-profile user=model}}
-    <div class="col-xs-4">
-        <div class="row">
-            <h3>List of Vendors</h3>
-        </div>
-        {{#each vendors as |vendor|}}
-            <div class="row">
-                <h4>{{vendor.name}}</h4>
-                <h6>{{vendor.description}}</h6>
-            </div>
-        {{/each}}
-    </div>
-    <div class="col-xs-4">
-        <div class="row">
-            <h3>List of Events</h3>
-        </div>
-        {{#each events as |event|}}
-            <div class="row">
-                <h4>{{event.title}}</h4>
-                <h6>{{moment event.eventDate 'MM/DD/YYYY'}}</h6>
-            </div>
-        {{/each}}
-    </div>
+
+<div class="large-item">
+  <ul>
+    <li><img src="assets/images/telescope.jpg" class="profile"></li>
+    <li><h1>{{model.fullName}}</h1></li>
+    <li><h3>{{model.tagline}}</h3></li>
+    <li>{{model.email}}</li>
+    <li>{{model.website}}</li>
+    <li><button class="btn rb-btn-info" {{action 'edit' user}}>Edit</button><button class="btn rb-btn-info" {{action 'delete' user}}>delete</button></li>
+  </ul>
+
 </div>
+
+<!-- {{user-profile user=model}} -->
